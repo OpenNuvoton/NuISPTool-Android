@@ -1,0 +1,8512 @@
+[
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x011306F0",
+    "name": "M030GGD1AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x011306E0",
+    "name": "M030GTD1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011306F2",
+    "name": "M030GGC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011306E2",
+    "name": "M030GTC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011306F1",
+    "name": "M030GGC0AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011306E1",
+    "name": "M030GTC0AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x011316F0",
+    "name": "M031GGD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x011316E0",
+    "name": "M031GTD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011316F2",
+    "name": "M031GGC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011316E2",
+    "name": "M031GTC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011316F1",
+    "name": "M031GGC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x011316E1",
+    "name": "M031GTC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01131100",
+    "name": "M031LIAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01132100",
+    "name": "M032LIAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01131110",
+    "name": "M031SIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01132110",
+    "name": "M032SIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01131140",
+    "name": "M031KIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01132140",
+    "name": "M032KIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131600",
+    "name": "M031LG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132600",
+    "name": "M032LG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131610",
+    "name": "M031SG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132610",
+    "name": "M032SG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131640",
+    "name": "M031KG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132640",
+    "name": "M032KG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131601",
+    "name": "M031LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132601",
+    "name": "M032LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131611",
+    "name": "M031SG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132611",
+    "name": "M032SG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131641",
+    "name": "M031KG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132641",
+    "name": "M032KG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131E00",
+    "name": "M031LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131E10",
+    "name": "M031SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131E90",
+    "name": "M031BTYE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01131EE0",
+    "name": "M031TE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132E00",
+    "name": "M032LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01132E10",
+    "name": "M032SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132DE0",
+    "name": "M032TD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132D00",
+    "name": "M032LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132DE1",
+    "name": "M032TC2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132D01",
+    "name": "M032LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01130DE0",
+    "name": "M030TD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01130D00",
+    "name": "M030LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01130DB0",
+    "name": "M030FD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132CB0",
+    "name": "M032FC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132CA0",
+    "name": "M032EC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01132CE0",
+    "name": "M032TC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131DE0",
+    "name": "M031TD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131D90",
+    "name": "M031BTYD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131D00",
+    "name": "M031LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131D01",
+    "name": "M031LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131D10",
+    "name": "M031SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131D11",
+    "name": "M031SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131CB0",
+    "name": "M031FC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131CA0",
+    "name": "M031EC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131CE0",
+    "name": "M031TC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131BB0",
+    "name": "M031FB0AE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131BA0",
+    "name": "M031EB0AE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x01131BE0",
+    "name": "M031TB0AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x016071A5",
+    "name": "M071MC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x016071A4",
+    "name": "M071MD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "8*1024",
+    "PDID": "0x01607193",
+    "name": "M071R1D3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x01607192",
+    "name": "M071R1E3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "8*1024",
+    "PDID": "0x01607113",
+    "name": "M071SD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x01607112",
+    "name": "M071SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01607171",
+    "name": "M071QE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01607170",
+    "name": "M071QG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01607130",
+    "name": "M071VG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A2121",
+    "name": "M0A21OB1AC",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A2120",
+    "name": "M0A21OC1AC",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A21A1",
+    "name": "M0A21EB1AC",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A21A0",
+    "name": "M0A21EC1AC",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A2321",
+    "name": "M0A23OB1AC",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A2320",
+    "name": "M0A23OC1AC",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A23A1",
+    "name": "M0A23EB1AC",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "2*1024",
+    "PDID": "0x015A23A0",
+    "name": "M0A23EC1AC",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005200",
+    "name": "M052LAN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005203",
+    "name": "M052ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005400",
+    "name": "M054LAN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005403",
+    "name": "M054ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005800",
+    "name": "M058LAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005803",
+    "name": "M058ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005A00",
+    "name": "M0516LAN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005A03",
+    "name": "M0516ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005200",
+    "name": "M052LBN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005203",
+    "name": "M052ZBN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005400",
+    "name": "M054LBN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005403",
+    "name": "M054ZBN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005800",
+    "name": "M058LBN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005803",
+    "name": "M058ZBN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005A00",
+    "name": "M0516LBN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10005A03",
+    "name": "M0516ZBN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005200",
+    "name": "M052LDN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005203",
+    "name": "M052ZDN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005400",
+    "name": "M054LDN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005403",
+    "name": "M054ZDN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005800",
+    "name": "M058LDN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005803",
+    "name": "M058ZDN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005A00",
+    "name": "M0516LDN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20005A03",
+    "name": "M0516ZDN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005200",
+    "name": "M052LDE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005203",
+    "name": "M052ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005400",
+    "name": "M054LDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005403",
+    "name": "M054ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005800",
+    "name": "M058LDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005803",
+    "name": "M058ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005807",
+    "name": "M058MDE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005A00",
+    "name": "M0516LDE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005A03",
+    "name": "M0516ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005818",
+    "name": "M058SFAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005813",
+    "name": "M058SZAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005810",
+    "name": "M058SLAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00005816",
+    "name": "M058SSAN",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205100",
+    "name": "MINI51LAN",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205103",
+    "name": "MINI51ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205104",
+    "name": "MINI51TAN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205200",
+    "name": "MINI52LAN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205203",
+    "name": "MINI52ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205204",
+    "name": "MINI52TAN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205400",
+    "name": "MINI54LAN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205403",
+    "name": "MINI54ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x00205404",
+    "name": "MINI54TAN",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205100",
+    "name": "MINI51LDE",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205101",
+    "name": "MINI51QDE",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205103",
+    "name": "MINI51ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205104",
+    "name": "MINI51TDE",
+    "note": null
+  },
+  {
+    "AP_size": "4*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00001000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205105",
+    "name": "MINI51FDE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205200",
+    "name": "MINI52LDE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205201",
+    "name": "MINI52QDE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205203",
+    "name": "MINI52ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205204",
+    "name": "MINI52TDE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205205",
+    "name": "MINI52FDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205400",
+    "name": "MINI54LDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205401",
+    "name": "MINI54QDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205403",
+    "name": "MINI54ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205404",
+    "name": "MINI54TDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205405",
+    "name": "MINI54FDE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x20205406",
+    "name": "MINI54FHC",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "5*512",
+    "PDID": "0x00A05800",
+    "name": "MINI58LDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "5*512",
+    "PDID": "0x00A05801",
+    "name": "MINI58QDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "5*512",
+    "PDID": "0x00A05803",
+    "name": "MINI58ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "5*512",
+    "PDID": "0x00A05804",
+    "name": "MINI58TDE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "5*512",
+    "PDID": "0x00A05805",
+    "name": "MINI58FDE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00505500",
+    "name": "MINI55LDE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00505503",
+    "name": "MINI55ZDE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00505504",
+    "name": "MINI55TDE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B05720",
+    "name": "MINI57FDE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B05740",
+    "name": "MINI57EDE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B05750",
+    "name": "MINI57XDE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B05760",
+    "name": "MINI57TDE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295A00",
+    "name": "NUC029LAN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295A06",
+    "name": "NUC029NAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295804",
+    "name": "NUC029TAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295824",
+    "name": "NUC029CIG1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295A03",
+    "name": "NUC029ZAN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30295804",
+    "name": "NUC029TAE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "2*1024",
+    "PDID": "0x00295415",
+    "name": "NUC029FAE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295A30",
+    "name": "NUC029LDE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295A31",
+    "name": "NUC029SDE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295A37",
+    "name": "NUC029MDE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00295B40",
+    "name": "NUC029LEE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00295B41",
+    "name": "NUC029SEE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295C50",
+    "name": "NUC029LGE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295C51",
+    "name": "NUC029SGE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00295C52",
+    "name": "NUC029KGE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10010008",
+    "name": "NUC100LC1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10010005",
+    "name": "NUC100LD1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10010004",
+    "name": "NUC100LD2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10010017",
+    "name": "NUC100RC1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10010014",
+    "name": "NUC100RD1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10010013",
+    "name": "NUC100RD2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00010003",
+    "name": "NUC100LD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00010000",
+    "name": "NUC100LE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00010012",
+    "name": "NUC100RD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00010009",
+    "name": "NUC100RE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00010022",
+    "name": "NUC100VD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00010021",
+    "name": "NUC100VD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00100018",
+    "name": "NUC100VE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010008",
+    "name": "NUC100LC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010005",
+    "name": "NUC100LD1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010004",
+    "name": "NUC100LD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010003",
+    "name": "NUC100LD3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010000",
+    "name": "NUC100LE3DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010017",
+    "name": "NUC100RC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010014",
+    "name": "NUC100RD1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010013",
+    "name": "NUC100RD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010012",
+    "name": "NUC100RD3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010009",
+    "name": "NUC100RE3DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010022",
+    "name": "NUC100VD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010021",
+    "name": "NUC100VD3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x30010018",
+    "name": "NUC100VE3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x40010018",
+    "name": "NUC100VE3DE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012008",
+    "name": "NUC120LC1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012005",
+    "name": "NUC120LD1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012004",
+    "name": "NUC120LD2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012017",
+    "name": "NUC120RC1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012014",
+    "name": "NUC120RD1BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012013",
+    "name": "NUC120RD2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012003",
+    "name": "NUC120LD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00120000",
+    "name": "NUC120LE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012012",
+    "name": "NUC120RD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012009",
+    "name": "NUC120RE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012022",
+    "name": "NUC120VD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012021",
+    "name": "NUC120VD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012018",
+    "name": "NUC120VE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012008",
+    "name": "NUC120LC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012005",
+    "name": "NUC120LD1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012004",
+    "name": "NUC120LD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x40012004",
+    "name": "NUC120LD2DE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012003",
+    "name": "NUC120LD3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012000",
+    "name": "NUC120LE3DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012035",
+    "name": "NUC120RC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012032",
+    "name": "NUC120RD1DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012031",
+    "name": "NUC120RD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012030",
+    "name": "NUC120RD3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012027",
+    "name": "NUC120RE3DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012022",
+    "name": "NUC120VD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012021",
+    "name": "NUC120VD3DN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012018",
+    "name": "NUC120VE3DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012180",
+    "name": "NUC121WC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012160",
+    "name": "NUC121Y25CN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012145",
+    "name": "NUC121ZC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012125",
+    "name": "NUC121LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012105",
+    "name": "NUC121SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012545",
+    "name": "NUC125ZC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012525",
+    "name": "NUC125LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "9*512",
+    "PDID": "0x00012505",
+    "name": "NUC125SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012235",
+    "name": "NUC122ZC1AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012231",
+    "name": "NUC122ZD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012208",
+    "name": "NUC122LC1AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012204",
+    "name": "NUC122LD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012226",
+    "name": "NUC122SC1AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012222",
+    "name": "NUC122SD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012231",
+    "name": "NUC122ZD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012204",
+    "name": "NUC122LD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012222",
+    "name": "NUC122SD2DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012235",
+    "name": "NUC122ZC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012208",
+    "name": "NUC122LC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30012226",
+    "name": "NUC122SC1DN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012345",
+    "name": "NUC123ZC2AN1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012355",
+    "name": "NUC123ZD4AN0",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012325",
+    "name": "NUC123LC2AN1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012335",
+    "name": "NUC123LD4AN0",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012305",
+    "name": "NUC123SC2AN1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00012315",
+    "name": "NUC123SD4AN0",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012345",
+    "name": "NUC123ZC2AE1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012355",
+    "name": "NUC123ZD4AE0",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012325",
+    "name": "NUC123LC2AE1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012335",
+    "name": "NUC123LD4AE0",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012305",
+    "name": "NUC123SC2AE1",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10012315",
+    "name": "NUC123SD4AE0",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013008",
+    "name": "NUC130LC1CN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013004",
+    "name": "NUC130LD2CN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013000",
+    "name": "NUC130LE3CN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013017",
+    "name": "NUC130RC1CN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013013",
+    "name": "NUC130RD2CN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013009",
+    "name": "NUC130RE3CN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x20013018",
+    "name": "NUC130VE3CN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014008",
+    "name": "NUC140LC1CN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014004",
+    "name": "NUC140LD2CN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014000",
+    "name": "NUC140LE3CN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014017",
+    "name": "NUC140RC1CN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014013",
+    "name": "NUC140RD2CN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014009",
+    "name": "NUC140RE3CN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x20014018",
+    "name": "NUC140VE3CN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x11413103",
+    "name": "M0515LDE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x11413100",
+    "name": "NUC1311LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x11413101",
+    "name": "NUC1311LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10013103",
+    "name": "NUC131LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10013100",
+    "name": "NUC131LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10013113",
+    "name": "NUC131SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10013110",
+    "name": "NUC131SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0xF0013103",
+    "name": "NUC131LC2AEU",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0xF0013100",
+    "name": "NUC131LD2AEU",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0xF0013113",
+    "name": "NUC131SC2AEU",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0xF0013110",
+    "name": "NUC131SD2AEU",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10051803",
+    "name": "M0518LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10051800",
+    "name": "M0518LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10051813",
+    "name": "M0518SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x10051810",
+    "name": "M0518SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00051930",
+    "name": "M0519VE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00051920",
+    "name": "M0519SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00051922",
+    "name": "M0519SD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00051900",
+    "name": "M0519LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00051902",
+    "name": "M0519LD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C56405",
+    "name": "M0564LE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C56404",
+    "name": "M0564LG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C56413",
+    "name": "M0564SE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C56412",
+    "name": "M0564SG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C56431",
+    "name": "M0564VG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C56440",
+    "name": "M0564KG4AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05206",
+    "name": "NUC126NE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05205",
+    "name": "NUC126LE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05204",
+    "name": "NUC126LG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05213",
+    "name": "NUC126SE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05212",
+    "name": "NUC126SG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05231",
+    "name": "NUC126VG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00C05230",
+    "name": "NUC126KG4AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01205212",
+    "name": "NUC1261SG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01205213",
+    "name": "NUC1261SE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01205204",
+    "name": "NUC1261LG4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01205205",
+    "name": "NUC1261LE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01205206",
+    "name": "NUC1261NE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01812610",
+    "name": "NUC1262SE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01812600",
+    "name": "NUC1262LE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01812690",
+    "name": "NUC1262NE4AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01256412",
+    "name": "M05641SG4AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01256413",
+    "name": "M05641SE4AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01256404",
+    "name": "M05641LG4AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "20*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01256405",
+    "name": "M05641LE4AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020007",
+    "name": "NUC200LC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020004",
+    "name": "NUC200LD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020000",
+    "name": "NUC200LE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020034",
+    "name": "NUC200SC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020031",
+    "name": "NUC200SD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020027",
+    "name": "NUC200SE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00020018",
+    "name": "NUC200VE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022007",
+    "name": "NUC220LC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022004",
+    "name": "NUC220LD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022000",
+    "name": "NUC220LE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022034",
+    "name": "NUC220SC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022031",
+    "name": "NUC220SD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022027",
+    "name": "NUC220SE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00022018",
+    "name": "NUC220VE3AN",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x40022000",
+    "name": "NUC220LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x40013017",
+    "name": "NUC230RC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023007",
+    "name": "NUC230LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023004",
+    "name": "NUC230LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023000",
+    "name": "NUC230LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023034",
+    "name": "NUC230SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023031",
+    "name": "NUC230SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023027",
+    "name": "NUC230SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x10023018",
+    "name": "NUC230VE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024007",
+    "name": "NUC240LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024004",
+    "name": "NUC240LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024000",
+    "name": "NUC240LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024034",
+    "name": "NUC240SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024031",
+    "name": "NUC240SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024027",
+    "name": "NUC240SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x10024018",
+    "name": "NUC240VE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x20024000",
+    "name": "NUC2201LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x20024027",
+    "name": "NUC2201SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110029",
+    "name": "Nano100ZC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110028",
+    "name": "Nano100ZD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110027",
+    "name": "Nano100ZD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110025",
+    "name": "Nano100LC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110019",
+    "name": "Nano100LD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110018",
+    "name": "Nano100LD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110023",
+    "name": "Nano100SC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110016",
+    "name": "Nano100SD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110015",
+    "name": "Nano100SD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110013",
+    "name": "Nano100VD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110012",
+    "name": "Nano100VD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110043",
+    "name": "Nano100LC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011003F",
+    "name": "Nano100LD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011003E",
+    "name": "Nano100LD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00110036",
+    "name": "Nano100LE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110042",
+    "name": "Nano100SC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011003D",
+    "name": "Nano100SD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011003C",
+    "name": "Nano100SD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00110034",
+    "name": "Nano100SE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110040",
+    "name": "Nano100KC2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110039",
+    "name": "Nano100KD2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110038",
+    "name": "Nano100KD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00110030",
+    "name": "Nano100KE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00110044",
+    "name": "Nano100NE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110045",
+    "name": "Nano100ND3BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110046",
+    "name": "Nano100ND2BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00110047",
+    "name": "Nano100WE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111042",
+    "name": "Nano110SC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011103D",
+    "name": "Nano110SD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011103C",
+    "name": "Nano110SD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00111034",
+    "name": "Nano110SE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111043",
+    "name": "Nano110RC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111044",
+    "name": "Nano110RD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111045",
+    "name": "Nano110RD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111040",
+    "name": "Nano110KC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111039",
+    "name": "Nano110KD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111038",
+    "name": "Nano110KD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00111030",
+    "name": "Nano110KE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112029",
+    "name": "Nano120ZC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112028",
+    "name": "Nano120ZD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112027",
+    "name": "Nano120ZD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112025",
+    "name": "Nano120LC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112019",
+    "name": "Nano120LD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112018",
+    "name": "Nano120LD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112023",
+    "name": "Nano120SC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112016",
+    "name": "Nano120SD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112015",
+    "name": "Nano120SD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112013",
+    "name": "Nano120VD2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112012",
+    "name": "Nano120VD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112043",
+    "name": "Nano120LC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011203F",
+    "name": "Nano120LD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011203E",
+    "name": "Nano120LD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00112036",
+    "name": "Nano120LE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112042",
+    "name": "Nano120SC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011203D",
+    "name": "Nano120SD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011203C",
+    "name": "Nano120SD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00112034",
+    "name": "Nano120SE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112040",
+    "name": "Nano120KC2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112039",
+    "name": "Nano120KD2BN",
+    "note": "old chip"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00112038",
+    "name": "Nano120KD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00112030",
+    "name": "Nano120KE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00113012",
+    "name": "Nano130VD3AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00113042",
+    "name": "Nano130SC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011303D",
+    "name": "Nano130SD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x0011303C",
+    "name": "Nano130SD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00113034",
+    "name": "Nano130SE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00113040",
+    "name": "Nano130KC2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00113039",
+    "name": "Nano130KD2BN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00113038",
+    "name": "Nano130KD3BN",
+    "note": null
+  },
+  {
+    "AP_size": "123*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0001EC00",
+    "LD_size": "4*1024",
+    "PDID": "0x00113030",
+    "name": "Nano130KE3BN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110202",
+    "name": "Nano102ZB1AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110204",
+    "name": "Nano102ZC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110206",
+    "name": "Nano102LB1AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110208",
+    "name": "Nano102LC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110212",
+    "name": "Nano102SC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111202",
+    "name": "Nano112LB1AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111204",
+    "name": "Nano112LC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111206",
+    "name": "Nano112SB1AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111208",
+    "name": "Nano112SC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111210",
+    "name": "Nano112RB1AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111212",
+    "name": "Nano112RC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00111216",
+    "name": "Nano112VC2AN",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110301",
+    "name": "Nano103SD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110302",
+    "name": "Nano103SD2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110303",
+    "name": "Nano103SD1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110304",
+    "name": "Nano103LD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110305",
+    "name": "Nano103LD2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110306",
+    "name": "Nano103LD1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110307",
+    "name": "Nano103ZD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110308",
+    "name": "Nano103ZD2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110309",
+    "name": "Nano103ZD1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110316",
+    "name": "Nano103SC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110310",
+    "name": "Nano103SC2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110311",
+    "name": "Nano103SC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110317",
+    "name": "Nano103LC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110312",
+    "name": "Nano103LC2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110313",
+    "name": "Nano103LC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110318",
+    "name": "Nano103ZC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110314",
+    "name": "Nano103ZC2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00110315",
+    "name": "Nano103ZC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B15000",
+    "name": "NPT150ZDE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B01400",
+    "name": "NM1120DC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B01420",
+    "name": "NM1120FC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B01440",
+    "name": "NM1120EC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B01450",
+    "name": "NM1120XC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B01460",
+    "name": "NM1120TC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B01470",
+    "name": "NM1120ZC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C01230B",
+    "name": "TF5103",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C051000",
+    "name": "TF5103D",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C051090",
+    "name": "TF5103Y",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C051091",
+    "name": "TF5102Y",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112430",
+    "name": "N32F030D",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112431",
+    "name": "N32F030Y",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112432",
+    "name": "N32F030X",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112401",
+    "name": "NM1243D48",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112491",
+    "name": "NM1243Y48",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C1124E1",
+    "name": "NM1243Y",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112400",
+    "name": "NM1244D48",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C112490",
+    "name": "NM1244Y48",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C1124E0",
+    "name": "NM1244Y",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C182490",
+    "name": "NM18407Y",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C012300",
+    "name": "NM1234D",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "15*512",
+    "PDID": "0x0C012302",
+    "name": "NM1232D",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C01230A",
+    "name": "NM1220EBK0",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C012390",
+    "name": "NM1234Y",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "15*512",
+    "PDID": "0x0C012392",
+    "name": "NM1232Y",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C012301",
+    "name": "NM1233D",
+    "note": null
+  },
+  {
+    "AP_size": "48*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0000C000",
+    "LD_size": "15*512",
+    "PDID": "0x0C012391",
+    "name": "NM1233Y",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00605400",
+    "name": "NM1200LBAE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00605404",
+    "name": "NM1200TBAE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00605407",
+    "name": "NM1100XBAE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00605408",
+    "name": "NM1100FBAE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x0060540A",
+    "name": "NM1100DBAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00605403",
+    "name": "NM1200ZBAE",
+    "note": null
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00605200",
+    "name": "NM1200LAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00605204",
+    "name": "NM1200TAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00605207",
+    "name": "NM1100XAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00605208",
+    "name": "NM1100FAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00032003",
+    "name": "NM1320LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x00034003",
+    "name": "NM1340D",
+    "note": "not release"
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005810",
+    "name": "NM1330LC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "4*1024",
+    "PDID": "0x30005A10",
+    "name": "NM1330LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00353000",
+    "name": "NM1530LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "8*1024",
+    "PDID": "0x00353030",
+    "name": "NM1530VE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00353032",
+    "name": "NM1530VD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00352023",
+    "name": "NM1520RD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00352025",
+    "name": "NM1520RC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00352003",
+    "name": "NM1520LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00352005",
+    "name": "NM1520LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "4*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x0001F000",
+    "LD_size": "8*1024",
+    "PDID": "0x00351006",
+    "name": "NM1510LC1AE",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81000",
+    "name": "NM1810FC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81010",
+    "name": "NM1810EC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81020",
+    "name": "NM1810XC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81030",
+    "name": "NM1810XC1BE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81040",
+    "name": "NM18100Y",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81041",
+    "name": "NM18101Y",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81042",
+    "name": "NM18102ZCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81043",
+    "name": "NM18103ZCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81045",
+    "name": "NM18105Y",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81047",
+    "name": "NM18107Y",
+    "note": null
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81050",
+    "name": "NM1810ZC1BE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81060",
+    "name": "NM1810LC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81120",
+    "name": "NM1811XC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81130",
+    "name": "NM1811ZC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81310",
+    "name": "NM1813FC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81320",
+    "name": "NM1813EC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81340",
+    "name": "NM1813LC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81710",
+    "name": "NM1817UC1AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "59*512",
+    "DF_size": "0*1024",
+    "RAM_size": "4*1024",
+    "DF_address": "0x00007600",
+    "LD_size": "2*1024",
+    "PDID": "0x00B81720",
+    "name": "NM1817NT",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682100",
+    "name": "NM1821FB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682010",
+    "name": "NM18200S",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682011",
+    "name": "NM18201S",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682012",
+    "name": "NM18202S",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682020",
+    "name": "NM1820ZB0AE",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682030",
+    "name": "NM18200D",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682031",
+    "name": "NM18201D",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682040",
+    "name": "NM18200Y",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682041",
+    "name": "NM18201Y",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682042",
+    "name": "NM18202Y",
+    "note": null
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682410",
+    "name": "NM1824FB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682320",
+    "name": "NM1823EB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682330",
+    "name": "NM1823ZB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682340",
+    "name": "NM1823LB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682710",
+    "name": "NM1827UB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "35*512",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00004600",
+    "LD_size": "2*1024",
+    "PDID": "0x00682720",
+    "name": "NM1827MB0AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "8*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "2*1024",
+    "DF_address": "0x00002000",
+    "LD_size": "2*1024",
+    "PDID": "0x00682721",
+    "name": "NM1827UW",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "15*512",
+    "PDID": "0x0C082390",
+    "name": "NM18307Y",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044212",
+    "name": "NUC442RG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044210",
+    "name": "NUC442RI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044209",
+    "name": "NUC442VG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044207",
+    "name": "NUC442VI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044206",
+    "name": "NUC442KG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044204",
+    "name": "NUC442KI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044203",
+    "name": "NUC442JG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00044201",
+    "name": "NUC442JI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047212",
+    "name": "NUC472VG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047210",
+    "name": "NUC472VI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047209",
+    "name": "NUC472KG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047207",
+    "name": "NUC472KI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047206",
+    "name": "NUC472JG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047204",
+    "name": "NUC472JI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047203",
+    "name": "NUC472HG8AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "16*1024",
+    "PDID": "0x00047201",
+    "name": "NUC472HI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845130",
+    "name": "M451VG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845131",
+    "name": "M451VE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845120",
+    "name": "M451RG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845121",
+    "name": "M451RE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845100",
+    "name": "M451LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845101",
+    "name": "M451LE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945130",
+    "name": "M451VD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945131",
+    "name": "M451VC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945120",
+    "name": "M451RD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945121",
+    "name": "M451RC3AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945110",
+    "name": "M451SD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945111",
+    "name": "M451SC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945100",
+    "name": "M451LD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945101",
+    "name": "M451LC3AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x009451F0",
+    "name": "M451YD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x009451F1",
+    "name": "M451YC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845230",
+    "name": "M452VG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845231",
+    "name": "M452VE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845220",
+    "name": "M452RG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845221",
+    "name": "M452RE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845210",
+    "name": "M452SG6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845211",
+    "name": "M452SE6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845200",
+    "name": "M452LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845201",
+    "name": "M452LE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945230",
+    "name": "M452VD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945231",
+    "name": "M452VC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945220",
+    "name": "M452RD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945221",
+    "name": "M452RC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945210",
+    "name": "M452SD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945211",
+    "name": "M452SC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945200",
+    "name": "M452LD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945201",
+    "name": "M452LC3AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x009452F0",
+    "name": "M452YD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x009452F1",
+    "name": "M452YC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845330",
+    "name": "M453VG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845331",
+    "name": "M453VE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845320",
+    "name": "M453RG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845321",
+    "name": "M453RE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845300",
+    "name": "M453LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845301",
+    "name": "M453LE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945330",
+    "name": "M453VD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945331",
+    "name": "M453VC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945320",
+    "name": "M453RD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945321",
+    "name": "M453RC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945310",
+    "name": "M453SD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945311",
+    "name": "M453SC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945300",
+    "name": "M453LD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945301",
+    "name": "M453LC3AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x009453F0",
+    "name": "M453YD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x009453F1",
+    "name": "M453YC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845020",
+    "name": "M451MRG6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845021",
+    "name": "M451MRE6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845000",
+    "name": "M451MLG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845001",
+    "name": "M451MLE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945020",
+    "name": "M451MRD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945021",
+    "name": "M451MRC3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945010",
+    "name": "M451MSD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945011",
+    "name": "M451MSC3AE",
+    "note": null
+  },
+  {
+    "AP_size": "72*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00012000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945000",
+    "name": "M451MLD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "40*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x0000A000",
+    "LD_size": "4*1024",
+    "PDID": "0x00945001",
+    "name": "M451MLC3AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845700",
+    "name": "M4LEDLG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845701",
+    "name": "M4LEDLE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845720",
+    "name": "M4LEDRG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845721",
+    "name": "M4LEDRE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845401",
+    "name": "M4TKLE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845400",
+    "name": "M4TKLG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845421",
+    "name": "M4TKRE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845420",
+    "name": "M4TKRG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845431",
+    "name": "M4TKVE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00845430",
+    "name": "M4TKVG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00E45220",
+    "name": "M4521RE6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00E45221",
+    "name": "M4521RD6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00E45210",
+    "name": "M4521SE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00E45211",
+    "name": "M4521SD6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00E45200",
+    "name": "M4521LE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00E45201",
+    "name": "M4521LD6AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48140",
+    "name": "M481KIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48141",
+    "name": "M481KGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48110",
+    "name": "M481SIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48111",
+    "name": "M481SGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48100",
+    "name": "M481LIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48101",
+    "name": "M481LGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D481E0",
+    "name": "M481ZIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D481E1",
+    "name": "M481ZGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D481E2",
+    "name": "M481ZGDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48250",
+    "name": "M482JIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48251",
+    "name": "M482JGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48240",
+    "name": "M482KIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48241",
+    "name": "M482KGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48230",
+    "name": "M482VIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48231",
+    "name": "M482VGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48210",
+    "name": "M482SIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48211",
+    "name": "M482SGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48212",
+    "name": "M482SIDAE3O",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48200",
+    "name": "M482LIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48201",
+    "name": "M482LGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D482E0",
+    "name": "M482ZIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48350",
+    "name": "M483JIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48351",
+    "name": "M483JGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48340",
+    "name": "M483KIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48341",
+    "name": "M483KGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48330",
+    "name": "M483VIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48331",
+    "name": "M483VGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48310",
+    "name": "M483SIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48311",
+    "name": "M483SGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48300",
+    "name": "M483LIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48301",
+    "name": "M483LGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48440",
+    "name": "M484KIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48441",
+    "name": "M484KGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48410",
+    "name": "M484SIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48411",
+    "name": "M484SGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48412",
+    "name": "M484SIDAE2U",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48413",
+    "name": "M484SGAAE2U",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48550",
+    "name": "M485JIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48551",
+    "name": "M485JGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48540",
+    "name": "M485KIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48541",
+    "name": "M485KGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48530",
+    "name": "M485VIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48531",
+    "name": "M485VGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48580",
+    "name": "M485OIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48581",
+    "name": "M485OGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48510",
+    "name": "M485SIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48511",
+    "name": "M485SGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48500",
+    "name": "M485LIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D485E0",
+    "name": "M485ZIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48650",
+    "name": "M486JIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48640",
+    "name": "M486KIDAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48750",
+    "name": "M487JIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48751",
+    "name": "M487JGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D4874E",
+    "name": "M487KMCAN",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48740",
+    "name": "M487KIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48741",
+    "name": "M487KGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48710",
+    "name": "M487SIDAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D48711",
+    "name": "M487SGAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "160*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00D480FF",
+    "name": "M480TEST",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348110",
+    "name": "M481SGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348111",
+    "name": "M481SG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348112",
+    "name": "M481SE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348114",
+    "name": "M481SGCAE2A",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348115",
+    "name": "M481SG8AE2A",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348100",
+    "name": "M481LGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348101",
+    "name": "M481LG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348102",
+    "name": "M481LE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x013481E0",
+    "name": "M481ZGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x013481E1",
+    "name": "M481ZG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x013481E2",
+    "name": "M481ZE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348240",
+    "name": "M482KGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348241",
+    "name": "M482KG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348210",
+    "name": "M482SGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348211",
+    "name": "M482SG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348212",
+    "name": "M482SE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348200",
+    "name": "M482LGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348201",
+    "name": "M482LG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348202",
+    "name": "M482LE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x013482E0",
+    "name": "M482ZGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x013482E1",
+    "name": "M482ZG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x013482E2",
+    "name": "M482ZE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348340",
+    "name": "M483KGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348341",
+    "name": "M483KG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348310",
+    "name": "M483SGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348311",
+    "name": "M483SG8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348312",
+    "name": "M483SE8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348344",
+    "name": "M483KGCAE2A",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348345",
+    "name": "M483KG8AE2A",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348314",
+    "name": "M483SGCAE2A",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01348315",
+    "name": "M483SG8AE2A",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01347911",
+    "name": "M479SG8AEE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01347901",
+    "name": "M479LG8AEE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01347991",
+    "name": "M479NG8AEE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46710",
+    "name": "M467SJHAE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46310",
+    "name": "M463SJHAE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46410",
+    "name": "M464SJHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46B10",
+    "name": "M463H3SJHAN",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46711",
+    "name": "M467SIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46311",
+    "name": "M463SIHAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46411",
+    "name": "M464SIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46B11",
+    "name": "M463H3SIHAN",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46730",
+    "name": "M467VJHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46731",
+    "name": "M467VIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46740",
+    "name": "M467KJHAE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46340",
+    "name": "M463KJHAE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46440",
+    "name": "M464KJHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46B40",
+    "name": "M463H3KJHAN",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46741",
+    "name": "M467KIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46341",
+    "name": "M463KIHAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46441",
+    "name": "M464KIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46B41",
+    "name": "M463H3KIHAN",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46750",
+    "name": "M467JJHAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46751",
+    "name": "M467JIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46760",
+    "name": "M467HJHAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46761",
+    "name": "M467HIHAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46B50",
+    "name": "M467H3JJHAN",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "512*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "8*1024",
+    "PDID": "0x01B46B61",
+    "name": "M467H3HJHAN",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46340",
+    "name": "M463KGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46440",
+    "name": "M464KGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46330",
+    "name": "M463VGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46310",
+    "name": "M463SGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46410",
+    "name": "M464SGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46380",
+    "name": "M463AGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46480",
+    "name": "M464AGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46300",
+    "name": "M463LGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46400",
+    "name": "M464LGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46390",
+    "name": "M463YGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46490",
+    "name": "M464YGCAE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46A40",
+    "name": "M46AKGCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46A10",
+    "name": "M46ASGCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46A80",
+    "name": "M46AAGCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46A00",
+    "name": "M46ALGCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "128*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "8*1024",
+    "PDID": "0x01C46A90",
+    "name": "M46AYGCAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647140",
+    "name": "M471KI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "48*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647141",
+    "name": "M471KG7AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647130",
+    "name": "M471VI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "48*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647131",
+    "name": "M471VG7AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647170",
+    "name": "M471QI8AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "48*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647171",
+    "name": "M471QG7AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647190",
+    "name": "M471RI8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "48*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647191",
+    "name": "M471RG7AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "64*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647100",
+    "name": "M471LI8AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "32*1024",
+    "RAM_size": "48*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647101",
+    "name": "M471LG7AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647192",
+    "name": "M471R1E6AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647193",
+    "name": "M471R1D6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647112",
+    "name": "M471SE6AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x01647113",
+    "name": "M471SD6AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x016471A3",
+    "name": "M471MD6AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25112",
+    "name": "NDA102SD2",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F252B0",
+    "name": "M252FC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F252A1",
+    "name": "M252EC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F252E2",
+    "name": "M252ZC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251B0",
+    "name": "M251FC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251A1",
+    "name": "M251EC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251E2",
+    "name": "M251ZC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251B3",
+    "name": "M251FB2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251A4",
+    "name": "M251EB2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "16*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00004000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251E5",
+    "name": "M251ZB2AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25110",
+    "name": "M251SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25101",
+    "name": "M251LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F251C2",
+    "name": "M251ZD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25113",
+    "name": "M251SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25104",
+    "name": "M251LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25210",
+    "name": "M252SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25201",
+    "name": "M252LD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "12*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F252C2",
+    "name": "M252ZD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25213",
+    "name": "M252SC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "32*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00008000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25204",
+    "name": "M252LC2AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25243",
+    "name": "M252KE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25214",
+    "name": "M252SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25205",
+    "name": "M252LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25143",
+    "name": "M251KE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25114",
+    "name": "M251SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25105",
+    "name": "M251LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25240",
+    "name": "M252KG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25211",
+    "name": "M252SG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25202",
+    "name": "M252LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25140",
+    "name": "M251KG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25111",
+    "name": "M251SG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25102",
+    "name": "M251LG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F254A1",
+    "name": "M254ME3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25410",
+    "name": "M254SD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25411",
+    "name": "M254SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25470",
+    "name": "M254QD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25471",
+    "name": "M254QE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25440",
+    "name": "M254KD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25441",
+    "name": "M254KE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25610",
+    "name": "M256SD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25611",
+    "name": "M256SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25670",
+    "name": "M256QD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25671",
+    "name": "M256QE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25640",
+    "name": "M256KD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25641",
+    "name": "M256KE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25810",
+    "name": "M258SD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25811",
+    "name": "M258SE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25870",
+    "name": "M258QD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25871",
+    "name": "M258QE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25840",
+    "name": "M258KD3AE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25841",
+    "name": "M258KE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F250E0",
+    "name": "M253ZE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "128*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00020000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25001",
+    "name": "M253LE3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "16*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x00F25000",
+    "name": "M253LD3AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x01A25411",
+    "name": "M254SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x01A256A1",
+    "name": "M256MD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x01A25611",
+    "name": "M256SD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "64*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "8*1024",
+    "DF_address": "0x00010000",
+    "LD_size": "4*1024",
+    "PDID": "0x01A254A1",
+    "name": "M254MD2AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01925841",
+    "name": "M258KG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01925441",
+    "name": "M254KG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01925871",
+    "name": "M258QG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01925671",
+    "name": "M256QG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01925811",
+    "name": "M258SG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "256*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "32*1024",
+    "DF_address": "0x00040000",
+    "LD_size": "4*1024",
+    "PDID": "0x01925411",
+    "name": "M254SG6AE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00235100",
+    "name": "M2351KIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00235101",
+    "name": "M2351SIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00235102",
+    "name": "M2351CIAAE",
+    "note": "not release"
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00235103",
+    "name": "M2351ZIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00235300",
+    "name": "M2351SFSIAAP",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "320*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "16*1024",
+    "PDID": "0x00235500",
+    "name": "M2354ES",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "256*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "16*1024",
+    "PDID": "0xA173544F",
+    "name": "M2354ALPHA",
+    "note": "not release"
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "256*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "16*1024",
+    "PDID": "0xA1735440",
+    "name": "M2354KJFAE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "256*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "16*1024",
+    "PDID": "0xA1735410",
+    "name": "M2354SJFAE",
+    "note": null
+  },
+  {
+    "AP_size": "1024*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "256*1024",
+    "DF_address": "0x00100000",
+    "LD_size": "16*1024",
+    "PDID": "0xA1735400",
+    "name": "M2354LJFAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00261000",
+    "name": "M261ZIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00261001",
+    "name": "M261SIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00261002",
+    "name": "M261KIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00262000",
+    "name": "M262ZIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00262001",
+    "name": "M262SIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00262002",
+    "name": "M262KIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00263000",
+    "name": "M263ZIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00263001",
+    "name": "M263SIAAE",
+    "note": null
+  },
+  {
+    "AP_size": "512*1024",
+    "DF_size": "0*1024",
+    "RAM_size": "96*1024",
+    "DF_address": "0x00080000",
+    "LD_size": "4*1024",
+    "PDID": "0x00263002",
+    "name": "M263KIAAE",
+    "note": null
+  }
+]

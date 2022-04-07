@@ -1,0 +1,229 @@
+ {
+  "series": "nuc400ae",
+  "subConfigSets": [
+    {
+      "index": 0,
+      "isEnable": true,
+      "subConfigs": [
+        {
+          "name": "CWDTEN",
+          "description": "Watchdog hardware Enable",
+          "offset": 31,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Window Watchdog Timer Enabled when chip is powered on.",
+            "1 = Window Watchdog Timer Disabled when chip is powered on."
+          ]
+        },
+        {
+          "name": "CWDTPDEN",
+          "description": "Watchdog Clock Power-down Enable.",
+          "offset": 30,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Watchdog Timer clock kept enabled when chip enters Power-down.",
+            "1 = Watchdog Timer clock is controlled by OSC10K_EN (PWRCON[3]) when chip enters Power-down."
+          ]
+        },
+        {
+          "name": "CKF",
+          "description": "XT1 Clock Filter Enable",
+          "offset": 28,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = XT1 clock filter Disabled.",
+            "1 = XT1 clock filter Enabled."
+          ]
+        },
+        {
+          "name": "CGPFMFP",
+          "description": "GPF Multi-Function Select",
+          "offset": 27,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = GPF[1:0] work as GPIO",
+            "1 = GPF[1:0] work as external 4~24MHz crystal pin"
+          ]
+        },
+        {
+          "name": "CFOSC",
+          "description": "CPU Clock Source Selection After Reset",
+          "offset": 24,
+          "length": 3,
+          "values": "000",
+          "options": [
+            "000",
+            "111"
+          ],
+          "optionDescription": [
+            "000 = External 4~24 MHz high speed crystal clock.",
+            "111 = Internal RC 22.1184 MHz high speed oscillator clock."
+          ]
+        },
+        {
+          "name": "CBODEN",
+          "description": "Brown-out Detector Enable",
+          "offset": 23,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Brown-out detect Enabled after powered on.",
+            "1 = Brown-out detect Disabled after powered on."
+          ]
+        },
+        {
+          "name": "CBOV1-0",
+          "description": "Brown-out Voltage Selection",
+          "offset": 21,
+          "length": 2,
+          "values": "00",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "00 = 2.2 V",
+            "01 = 2.7 V",
+            "10 = 3.8 V",
+            "11 = 4.5 V"
+          ]
+        },
+        {
+          "name": "CBORST",
+          "description": "Brown-out Reset Enable",
+          "offset": 20,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Brown-out reset Enabled after powered on.",
+            "1 = Brown-out reset Disabled after powered on."
+          ]
+        },
+        {
+          "name": "LDWPEN",
+          "description": "LDROM Write-Protected Enable",
+          "offset": 11,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = LDROM (16KB) write-protected enabled.",
+            "1 = LDROM (16KB) write-protected disable."
+          ]
+        },
+        {
+          "name": "CIOINI",
+          "description": "IO Initial State Select",
+          "offset": 10,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = All GPIO set as input tri-state mode after power on.",
+            "1 = All GPIO set as Quasi bi-direction mode after chip power on."
+          ]
+        },
+        {
+          "name": "CBS",
+          "description": "Config Boot Selection",
+          "offset": 6,
+          "length": 2,
+          "values": "00",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "Please refer to the spec for detail",
+            "Please refer to the spec for detail",
+            "Please refer to the spec for detail",
+            "Please refer to the spec for detail"
+          ]
+        },
+        {
+          "name": "LOCK",
+          "description": "Security Lock Control",
+          "offset": 1,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Flash data is not locked.",
+            "1 = Flash data is locked for writer, ICE and ICP."
+          ]
+        },
+        {
+          "name": "DFEN",
+          "description": "Data Flash Enable Bit",
+          "offset": 0,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Data Flash Enabled.",
+            "1 = Data Flash Disabled."
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "isEnable": false,
+      "subConfigs": []
+    },
+    {
+      "index": 2,
+      "isEnable": false,
+      "subConfigs": []
+    },
+    {
+      "index": 3,
+      "isEnable": false,
+      "subConfigs": []
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+ {
+  "series": "m251",
+  "subConfigSets": [
+    {
+      "index": 0,
+      "isEnable": true,
+      "subConfigs": [
+        {
+          "name": "CWDTEN[2]",
+          "description": "Watchdog Timer Hardware Enable Bit",
+          "offset": 31,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Please refer to the spec for detail",
+            "1 = Please refer to the spec for detail"
+          ]
+        },
+        {
+          "name": "CWDTPDEN",
+          "description": "Watchdog Clock Power-down Enable Bit",
+          "offset": 30,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Watchdog Timer clock kept enabled when chip enters Power-down.",
+            "1 = Watchdog Timer clock is controlled by LIRCEN (CLK_PWRCTL[3]) when chip enters Power-down."
+          ]
+        },
+        {
+          "name": "CBOV",
+          "description": "Brown-Out Voltage Selection",
+          "offset": 21,
+          "length": 3,
+          "values": "000",
+          "options": [
+            "000",
+            "001",
+            "010",
+            "011",
+            "100",
+            "101",
+            "110",
+            "111"
+          ],
+          "optionDescription": [
+            "000 = Brown-out voltage is 1.8V.",
+            "001 = Brown-out voltage is 1.8V.",
+            "010 = Brown-out voltage is 2.0V.",
+            "011 = Brown-out voltage is 2.4V.",
+            "100 = Brown-out voltage is 2.7V.",
+            "101 = Brown-out voltage is 3.0V.",
+            "110 = Brown-out voltage is 3.7V.",
+            "111 = Brown-out voltage is 4.4V."
+          ]
+        },
+        {
+          "name": "CBORST",
+          "description": "Brown-Out Reset Enable Bit",
+          "offset": 20,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Brown-out reset Enabled after powered on.",
+            "1 = Brown-out reset Disabled after powered on."
+          ]
+        },
+        {
+          "name": "CBODEN",
+          "description": "Brown-Out Detector Enable Bit",
+          "offset": 19,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0= Brown-out detect Enabled after powered on.",
+            "1= Brown-out detect Disabled after powered on."
+          ]
+        },
+        {
+          "name": "ICELOCK",
+          "description": "ICE Lock Bit",
+          "offset": 12,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = ICE function Disabled.",
+            "1 = ICE function Enabled."
+          ]
+        },
+        {
+          "name": "CIONIN",
+          "description": "I/O Initial State Selection",
+          "offset": 10,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = All GPIO set as Quasi-bidirectional mode after chip powered on.",
+            "1 = All GPIO set as input tri-state mode after powered on."
+          ]
+        },
+        {
+          "name": "CBS",
+          "description": "Chip Booting Selection",
+          "offset": 6,
+          "length": 2,
+          "values": "00",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "00 = Boot from LDROM with IAP mode.",
+            "01 = Boot from LDROM without IAP mode.",
+            "10 = Boot from APROM with IAP mode.",
+            "11 = Boot from APROM without IAP mode."
+          ]
+        },
+        {
+          "name": "CWDTEN[1:0]",
+          "description": "Watchdog Timer Hardware Enable Bit",
+          "offset": 3,
+          "length": 2,
+          "values": "01",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "00 = Please refer to the spec for detail",
+            "01 = Please refer to the spec for detail",
+            "10 = Please refer to the spec for detail",
+            "11 = Please refer to the spec for detail"
+          ]
+        },
+        {
+          "name": "LOCK",
+          "description": "Security Lock Conrtol",
+          "offset": 1,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Flash memory content is locked.",
+            "1 = Flash memory content is not locked."
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "isEnable": false,
+      "subConfigs": []
+    },
+    {
+      "index": 2,
+      "isEnable": false,
+      "subConfigs": []
+    },
+    {
+      "index": 3,
+      "isEnable": true,
+      "subConfigs": [
+        {
+          "name": "ALOCK",
+          "description": "Advanced Security Lock Control",
+          "offset": 0,
+          "length": 8,
+          "values": "01011010",
+          "options": [
+            "01011010",
+            "00000000"
+          ],
+          "optionDescription": [
+            "0x5A = Flash memory content is unlocked if LOCK (CONFIG0[1]) is set to 1.",
+            "0x00 = Flash memory content is locked."
+          ]
+        }
+      ]
+    }
+  ]
+}

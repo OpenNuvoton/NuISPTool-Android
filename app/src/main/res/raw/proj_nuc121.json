@@ -1,0 +1,233 @@
+ {
+  "series": "nuc121",
+  "subConfigSets": [
+    {
+      "index": 0,
+      "isEnable": true,
+      "subConfigs": [
+        {
+          "name": "CWDTEN[2]",
+          "description": "Watchdog Timer Hardware Enable Control Bits",
+          "offset": 31,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Please refer to the spec for detail",
+            "1 = Please refer to the spec for detail"
+          ]
+        },
+        {
+          "name": "CWDTPDEN",
+          "description": "Watchdog Clock Power-down Enable Bit",
+          "offset": 30,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Watchdog Timer clock kept enabled when chip enters Power-down.",
+            "1 = Watchdog Timer clock is controlled by LIRCEN (CLK_PWRCTL[3]) when chip enters Power-down."
+          ]
+        },
+        {
+          "name": "CFGXT1",
+          "description": "PF[4:3] Multi-function Selection",
+          "offset": 27,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = PF[4:3] pins are configured as GPIO pins.",
+            "1 =PF[4:3] pins are configured as external 4~24 MHz external high speed crystal oscillator\n(HXT) pins."
+          ]
+        },
+        {
+          "name": "CFOSC",
+          "description": "CPU Clock Source Selection After Reset",
+          "offset": 26,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = 4~24 MHz external high speed crystal oscillator (HXT).",
+            "1 = 24 MHz, the internal high speed RC oscillator divided by 2 (HIRC/2)."
+          ]
+        },
+        {
+          "name": "CBODEN",
+          "description": "Brown-out Detector Enable Bit",
+          "offset": 23,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0= Brown-out detect Enabled after powered on.",
+            "1= Brown-out detect Disabled after powered on."
+          ]
+        },
+        {
+          "name": "CBOV",
+          "description": "Brown-Out Voltage Selection",
+          "offset": 21,
+          "length": 2,
+          "values": "00",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "00 = Brown-out voltage is 2.2V.",
+            "01 = Brown-out voltage is 2.7V.",
+            "10 = Brown-out voltage is 3.7V.",
+            "11 = Brown-out voltage is 4.5V."
+          ]
+        },
+        {
+          "name": "CBORST",
+          "description": "Brown-Out Reset Enable Bit",
+          "offset": 20,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Brown-out reset Enabled after powered on.",
+            "1 = Brown-out reset Disabled after powered on."
+          ]
+        },
+        {
+          "name": "ICELOCK",
+          "description": "ICE Lock Bit",
+          "offset": 12,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = ICE can’t access Cortex® -M0 debug port.",
+            "1 = ICE can access Cortex® -M0 debug port."
+          ]
+        },
+        {
+          "name": "CIOINI",
+          "description": "I/O Initial State Selection",
+          "offset": 10,
+          "length": 1,
+          "values": "1",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = All GPIO set as input tri-state mode after powered on.",
+            "1 = All GPIO set as Quasi-bidirectional mode after chip powered on."
+          ]
+        },
+        {
+          "name": "CBS",
+          "description": "Chip Booting Selection",
+          "offset": 6,
+          "length": 2,
+          "values": "0",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "00 = Boot from LDROM with IAP mode",
+            "01 = Boot from LDROM without IAP mode.",
+            "10 = Boot from APROM with IAP mode.",
+            "11 = Boot from APROM without IAP mode."
+          ]
+        },
+        {
+          "name": "CWDTEN[1:0]",
+          "description": "Watchdog Timer Hardware Enable Bit",
+          "offset": 3,
+          "length": 2,
+          "values": "01",
+          "options": [
+            "00",
+            "01",
+            "10",
+            "11"
+          ],
+          "optionDescription": [
+            "Please refer to the spec for detail",
+            "Please refer to the spec for detail",
+            "Please refer to the spec for detail",
+            "Please refer to the spec for detail"
+          ]
+        },
+        {
+          "name": "LOCK",
+          "description": "Security Lock Control",
+          "offset": 1,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Flash memory content is locked.",
+            "1 = Flash memory content is not locked."
+          ]
+        },
+        {
+          "name": "DFEN",
+          "description": "Data Flash Enable Bit",
+          "offset": 0,
+          "length": 1,
+          "values": "0",
+          "options": [
+            "0",
+            "1"
+          ],
+          "optionDescription": [
+            "0 = Data Flash Enabled.",
+            "1 = Data Flash Disabled."
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "isEnable": true,
+      "subConfigs": []
+    },
+    {
+      "index": 2,
+      "isEnable": false,
+      "subConfigs": []
+    },
+    {
+      "index": 3,
+      "isEnable": false,
+      "subConfigs": []
+    }
+  ]
+}
