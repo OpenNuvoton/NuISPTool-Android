@@ -1,9 +1,26 @@
 package com.nuvoton.nuisptool_android.ISPTool
 
+import android.annotation.SuppressLint
 import android.hardware.usb.UsbDevice
+import android.os.Build
+import android.os.Handler
+import android.os.Looper
+import androidx.annotation.RequiresApi
+import com.nuvoton.nuisptool_android.Util.DialogTool
 import com.nuvoton.nuisptool_android.Util.Log
 import com.nuvoton.nuisptool_android.Util.HEXTool
 import kotlin.concurrent.thread
+
+enum class NulinkInterfaceType constructor(val value: Byte) {
+
+    USB    (0x00),
+//    INTF_HID    (0x01),
+    UART   (0x02),
+    SPI    (0x03),
+    I2C    (0x04),
+    RS485  (0x05),
+    CAN    (0x06),
+}
 
 object ISPManager {
     /**
@@ -14,12 +31,13 @@ object ISPManager {
     private var connect_interface_index = 0
     private var byteSize = 64
     private val forceClaim = true
-    private val timeOut = 0
+    private val timeOut = 100
+    private val isSearchLoop = false
 
     private var packetNumber: UInt = (0x00000005).toUInt()
+    public var interfaceType : NulinkInterfaceType = NulinkInterfaceType.USB
 
     private var _readListener: ((ByteArray) -> Unit)? = null
-
     private var _byteArrayResultListener: ((ByteArray) -> Unit)? = null
 //    fun setByteArrayRequestListener(callbacks: (ByteArray)->Unit){
 //        _byteArrayResultListener = callbacks
@@ -138,8 +156,7 @@ object ISPManager {
 
             //config＿1  先寫死
             val cmd = ISPCommands.CMD_UPDATE_CONFIG
-            val sendBuffer =
-                ISPCommandTool.toUpdataCongigeCMD(config0, config1, config2,config3, packetNumber)
+            val sendBuffer = ISPCommandTool.toUpdataCongigeCMD(config0, config1, config2,config3, packetNumber)
             this.write(usbDevice, sendBuffer)
 
             val readBuffer = this.read(usbDevice)
@@ -159,16 +176,20 @@ object ISPManager {
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
     }
 
-    fun sendCMD_CONNECT(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean) -> Unit)) {
+    fun sendCMD_CONNECT(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean,isTimeout:Boolean) -> Unit)) {
 
         this.packetNumber = (0x00000001).toUInt()
         val cmd = ISPCommands.CMD_CONNECT
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
-        val readBuffer = this.read(usbDevice)
-        var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
+//        this.write(usbDevice, sendBuffer)
+//        val readBuffer = this.read(usbDevice)
+        thread {
+            this.executeWriteRead(usbDevice,sendBuffer,100, callback = { readBuffer,isTimeout ->
+                var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
+                callback.invoke(readBuffer, isChecksum,isTimeout)
+            })
+        }
 
-        callback.invoke(readBuffer, isChecksum)
     }
 
     fun sendCMD_GET_DEVICEID(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean) -> Unit)) {
@@ -225,7 +246,72 @@ object ISPManager {
         return true
     }
 
+    @SuppressLint("NewApi")
+    private fun executeWriteRead(usbDevice: UsbDevice, cmdArray: ByteArray,timeoutIndex:Int,callback: (ByteArray?,isTimeout:Boolean) -> Unit){
+
+        if(interfaceType != NulinkInterfaceType.USB){
+            for( i in 0..usbDevice.interfaceCount - 1){
+                if(usbDevice.getInterface(i).name != null && usbDevice.getInterface(i).name!!.indexOf("ISP")>-1){
+                    connect_interface_index = i  //找到 ISP_HID InterFace
+                }
+            }
+        }else{
+            connect_interface_index = 0
+        }
+
+        var index = 0
+        var isRead = -1
+        val readBuffer = ByteArray(64)
+
+        var intf = usbDevice.getInterface(connect_interface_index)
+        var writePoint = intf.getEndpoint(write_endpoint_index)
+        var readPoint = intf.getEndpoint(read_endpoint_index)
+        var connection = OTGManager.USBManager.openDevice(usbDevice)
+        connection.claimInterface(intf,forceClaim)
+
+            while (isRead != 64) {
+
+                cmdArray.set(1, interfaceType.value)//NULINK
+
+                val sendBuffer = cmdArray
+                var readBufferStrring = HEXTool.toHexString(sendBuffer)
+                var display = HEXTool.toDisPlayString(readBufferStrring)
+
+                val isWrite = connection.bulkTransfer(writePoint, sendBuffer, sendBuffer.size, 0)
+                Log.i("ISPManager", "isWrite=" + isWrite + "    ,sendBuffer:  " + display)
+
+                isRead = connection.bulkTransfer(readPoint, readBuffer,readBuffer.size,100)
+                readBufferStrring = HEXTool.toHexString(readBuffer)
+                display = HEXTool.toDisPlayString(readBufferStrring)
+                Log.i("ISPManager", "isRead=" + isRead + "    ,readBuffer:  " + display)
+
+                if(index >= timeoutIndex){
+                    isRead = 64
+                    callback.invoke(null,true)
+                    return
+                }else{
+                    index = index + 1
+                    Log.i("ISPManager", "index=" + index )
+                }
+            }
+
+            callback.invoke(readBuffer,false)
+
+    }
+
+    @SuppressLint("NewApi")
     private fun read(usbDevice: UsbDevice): ByteArray? {
+
+        if(interfaceType != NulinkInterfaceType.USB){
+            for( i in 0..usbDevice.interfaceCount - 1){
+                if(usbDevice.getInterface(i).name != null && usbDevice.getInterface(i).name!!.indexOf("ISP")>-1){
+                    connect_interface_index = i
+                }
+            }
+        }else{
+            connect_interface_index = 0
+        }
+
 
         usbDevice?.getInterface(connect_interface_index)?.also { intf ->
             intf.getEndpoint(read_endpoint_index)?.also { endpoint ->
@@ -234,15 +320,15 @@ object ISPManager {
 
                     val readBuffer = ByteArray(64)
 
-                    bulkTransfer(
+                    val i = bulkTransfer(
                         endpoint,
                         readBuffer,
                         readBuffer.size,
-                        timeOut
+                        0
                     ) //do in another thread
                     val readBufferStrring = HEXTool.toHexString(readBuffer)
-                    var display = HEXTool.toDisPlayString(readBufferStrring)
-                    Log.i("ISPManager", "readBuffer:  "+display)
+                    val display = HEXTool.toDisPlayString(readBufferStrring)
+                    Log.i("ISPManager", "i="+i+"    ,readBuffer:  "+display)
 
                     return readBuffer
                 }
@@ -251,7 +337,22 @@ object ISPManager {
         return null
     }
 
+    @SuppressLint("NewApi")
     private fun write(usbDevice: UsbDevice, cmdArray: ByteArray) {
+
+
+        //替換掉nu-link2的暗號
+        cmdArray.set(1, interfaceType.value)
+        if(interfaceType != NulinkInterfaceType.USB){
+            for( i in 0..usbDevice.interfaceCount - 1){
+                if(usbDevice.getInterface(i).name != null && usbDevice.getInterface(i).name!!.indexOf("ISP")>-1){
+                    connect_interface_index = i  //找到 Nu-Link2 ISP
+                }
+            }
+        }else{
+            connect_interface_index = 0
+        }
+
         usbDevice?.getInterface(connect_interface_index)?.also { intf ->
 
             intf.getEndpoint(write_endpoint_index)?.also { endpoint ->
@@ -259,15 +360,16 @@ object ISPManager {
                     claimInterface(intf, forceClaim)
                     val sendBuffer = cmdArray
                     val readBufferStrring = HEXTool.toHexString(sendBuffer)
-                    var display = HEXTool.toDisPlayString(readBufferStrring)
-                    Log.i("ISPManager", "writeBuffer: "+display)
+                    val display = HEXTool.toDisPlayString(readBufferStrring)
 
-                    bulkTransfer(
+                    val i = bulkTransfer(
                         endpoint,
                         sendBuffer,
                         sendBuffer.size,
                         timeOut
                     ) //do in another thread
+
+                    Log.i("ISPManager", "i="+i+"    ,writeBuffer: "+display)
                 }
             }
         }

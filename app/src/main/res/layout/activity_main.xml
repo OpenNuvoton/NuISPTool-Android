@@ -94,18 +94,21 @@
                     android:text="USB" />
 
                 <RadioButton
+                    android:id="@+id/RadioButton_SPI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="SPI" />
+
+                <RadioButton
                     android:id="@+id/RadioButton_UART"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:enabled="false"
+                    android:visibility="invisible"
                     android:text="UART" />
 
-                <RadioButton
-                    android:id="@+id/RadioButton_SPI"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:text="SPI" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -118,21 +121,21 @@
                     android:id="@+id/RadioButton_I2C"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
+
                     android:text="I2C" />
 
                 <RadioButton
                     android:id="@+id/RadioButton_RS485"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
+
                     android:text="RS485" />
 
                 <RadioButton
                     android:id="@+id/RadioButton_CAN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
+                    android:visibility="invisible"
                     android:text="CAN" />
             </LinearLayout>
             <LinearLayout

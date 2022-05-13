@@ -96,9 +96,9 @@ object ISPCommandTool {
     /**
      * 計算Checksum應該為？
      */
-    fun toChecksumBySendBuffer(sendBuffer:ByteArray/*CMD:ISPCommands,packetNumber:UInt*/):UInt{
-//        val numSUM = (packetNumber shr 0).toByte()+(packetNumber shr 8).toByte()+(packetNumber shr 16).toByte()+(packetNumber shr 24).toByte()
-//        val byte = CMD.value.toByte() + numSUM.toByte()
+    fun toChecksumBySendBuffer(sendBuffer:ByteArray):UInt{
+
+        sendBuffer.set(1,0x00) //將不同interface所偷改的修正回來
         var uint = 0u
         for(byte in sendBuffer) {
             uint = uint + byte.toUByte().toUInt()

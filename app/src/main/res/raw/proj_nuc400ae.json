@@ -172,10 +172,10 @@
             "11"
           ],
           "optionDescription": [
-            "Please refer to the spec for detail",
-            "Please refer to the spec for detail",
-            "Please refer to the spec for detail",
-            "Please refer to the spec for detail"
+            "00 = APROM can be updated in this mode.",
+            "01 = Chip booting from LDROM.",
+            "10 = Chip booting from APROM.",
+            "11 = Chip booting from APROM and program executing range only including APROM."
           ]
         },
         {

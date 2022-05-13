@@ -7,7 +7,7 @@
       "subConfigs": [
         {
           "name": "CWDTEN[2]",
-          "description": "Watchdog Timer Hardware Enable Control Bits",
+          "description": "Watchdog Timer Hardware Enable Control Bits.\nCWDTEN[2:0] is CONFIG0[31][4][3],\n011 = WDT hardware enable function is active. WDT clock is always on except chip enters\nPower-down mode. When chip enter Power-down mode, WDT clock is always on if\nCWDTPDEN is 0 or WDT clock is controlled by OSC10K_EN (PWRCON[3]) if\nCWDTPDEN is 1. Please refer to bit field description of CWDTPDEN.\n111 = WDT hardware enable function is inactive.\nOthers = WDT hardware enable function is active. WDT clock is always on.",
           "offset": 31,
           "length": 1,
           "values": "1",
@@ -16,8 +16,8 @@
             "1"
           ],
           "optionDescription": [
-            "0 = Please refer to the spec for detail",
-            "1 = Please refer to the spec for detail"
+            "CONFIG0[31] = 0",
+            "CONFIG0[31] = 1"
           ]
         },
         {
@@ -165,7 +165,7 @@
         },
         {
           "name": "CWDTEN[1:0]",
-          "description": "Watchdog Timer Hardware Enable Bit",
+          "description": "Watchdog Timer Hardware Enable Control Bits.\nCWDTEN[2:0] is CONFIG0[31][4][3],\n011 = WDT hardware enable function is active. WDT clock is always on except chip enters\nPower-down mode. When chip enter Power-down mode, WDT clock is always on if\nCWDTPDEN is 0 or WDT clock is controlled by OSC10K_EN (PWRCON[3]) if\nCWDTPDEN is 1. Please refer to bit field description of CWDTPDEN.\n111 = WDT hardware enable function is inactive.\nOthers = WDT hardware enable function is active. WDT clock is always on.",
           "offset": 3,
           "length": 2,
           "values": "01",
@@ -176,10 +176,10 @@
             "11"
           ],
           "optionDescription": [
-            "Please refer to the spec for detail",
-            "Please refer to the spec for detail",
-            "Please refer to the spec for detail",
-            "Please refer to the spec for detail"
+            "CONFIG0[4][3] = 00",
+            "CONFIG0[4][3] = 01",
+            "CONFIG0[4][3] = 10",
+            "CONFIG0[4][3] = 11"
           ]
         },
         {

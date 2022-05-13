@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import com.nuvoton.nuisptool_android.ISPActivity
 import com.nuvoton.nuisptool_android.MainActivity
 import androidx.core.content.ContextCompat.startActivity
+import com.nuvoton.nuisptool_android.Util.DialogTool
 
 
 object OTGManager {
@@ -42,8 +43,12 @@ object OTGManager {
     private lateinit var _USBDevice: UsbDevice
     private var _DeviceListener: ((UsbDevice) -> Unit)? = null
     private var _isOnlineListener: ((Boolean) -> Unit)? = null
+    private var _isRegisterReceiver = false
 
     fun start(context: Context) {
+        if(_isRegisterReceiver == true){
+            return
+        }
         //監聽事件廣播註冊
         val filter = IntentFilter()
         filter.addAction(ACTION_USB_PERMISSION)
@@ -51,6 +56,7 @@ object OTGManager {
         filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED)
         filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED)
         context.registerReceiver(broadcastReceiver, filter)
+        _isRegisterReceiver = true
     }
 
     fun get_USBDevice(): UsbDevice {
@@ -73,6 +79,7 @@ object OTGManager {
                 Log.i(TAG, "deviceProtocol:" + _USBDevice.deviceProtocol)
                 Log.i(TAG, "deviceClass:" + _USBDevice.deviceClass)
                 Log.i(TAG, "vendorId:" + _USBDevice.vendorId)
+//                Log.i(TAG, "getInterface 5 :" + _USBDevice.getInterface(5))
 
                 _DeviceListener.let {
                     if (it != null) {
@@ -117,16 +124,13 @@ object OTGManager {
             }
         } else {
 
-            val activity = context as Activity
-            activity.runOnUiThread {
-                val builder = AlertDialog.Builder(context)
-                builder.setMessage(R.string.No_USB_Device_Connected)
-                    .setNegativeButton(R.string.ok,
-                        DialogInterface.OnClickListener { dialog, id ->
-                            // User cancelled the dialog
-                        })
-                builder.show()
-            }
+            DialogTool.showAlertDialog(
+                context,
+                "No USB Device Connected",
+                true,
+                false,
+                callback = { isOk, isNo ->}
+            )
 
             Log.i(TAG, "no usb device connected")
 

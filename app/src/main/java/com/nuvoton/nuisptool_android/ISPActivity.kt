@@ -36,6 +36,7 @@ class ISPActivity : AppCompatActivity() {
     private lateinit var _button_burn: Button
     private lateinit var _button_config: Button
     private lateinit var _button_disconnect: Button
+    private lateinit var _text_devies_interface : TextView
     private lateinit var _text_devies_part_no : TextView
     private lateinit var _text_devies_aprom: TextView
     private lateinit var _text_devies_data: TextView
@@ -62,7 +63,7 @@ class ISPActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ispactivity)
         getSupportActionBar()!!.setTitle("Nuvoton Android ISP Tool")
-
+        _text_devies_interface = findViewById<View>(R.id.connection_interface) as TextView
         _progressBar = findViewById<View>(R.id.progressBar) as ProgressBar
         _text_message_display = findViewById<View>(R.id.MESSAGE_TEXT) as TextView
         _text_message_display.setMovementMethod(ScrollingMovementMethod())
@@ -126,22 +127,6 @@ class ISPActivity : AppCompatActivity() {
         OTGManager.setIsOnlineListener {
             if (it == false) { //裝置離線
                 runOnUiThread {
-                    if (_checkbox_rest_and_run.isChecked == true) {
-
-                        DialogTool.showAlertDialog(
-                            this,
-                            "Reset and Run finish,need re plugin to connect.",
-                            true,
-                            false,
-                            callback = { isOk, isNo ->
-                                val intent = Intent(this, MainActivity::class.java)
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                                this.startActivity(intent)
-                            })
-
-                        return@runOnUiThread
-                    }
-
                     DialogTool.showAlertDialog(
                         this,
                         "Device is Disconnection",
@@ -157,10 +142,25 @@ class ISPActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+//        super.onBackPressed()
+        Log.i(TAG, "onBackPressed")
+        DialogTool.showAlertDialog(this,"want to Disconnect?",true,true , callback = { isOk , isNo ->
+            if(isOk){
+                val intent = Intent(this, MainActivity::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                this.startActivity(intent)
+            }
+        })
+        return
+    }
     /**
      * 用來更新畫面
      */
     fun initUI(){
+
+        _text_devies_interface.setText("Connection Interface："+ISPManager.interfaceType.name)
+
         val USBDevice = OTGManager.get_USBDevice()
 
         ISPManager.sendCMD_GET_FWVER(USBDevice, callback = { readArray,isChecksum ->
@@ -188,7 +188,21 @@ class ISPActivity : AppCompatActivity() {
                 DialogTool.showAlertDialog(this,"Config json file not found!\nThe burning function can be used,\n" +
                         "but the correctness of the function is not guaranteed.",true,false,null)
             }
-            return//todo 提醒使用者
+
+            ISPManager.sendCMD_READ_CONFIG(USBDevice, callback = {
+                if (it == null) { return@sendCMD_READ_CONFIG}
+                var configText = "Config 0,1,2,3：\n"
+                val displayConfig0 = ISPCommandTool.toDisplayComfig0(it)
+                val displayConfig1 = ISPCommandTool.toDisplayComfig1(it)
+                val displayConfig2 = ISPCommandTool.toDisplayComfig2(it)
+                val displayConfig3 = ISPCommandTool.toDisplayComfig3(it)
+                _button_config_0.setText(displayConfig0)
+                _button_config_1.setText(displayConfig1)
+                _button_config_2.setText(displayConfig2)
+                _button_config_3.setText(displayConfig3)
+            })
+
+            return
         }
 
         ISPManager.sendCMD_READ_CONFIG(USBDevice, callback = {
@@ -261,12 +275,14 @@ class ISPActivity : AppCompatActivity() {
                         DialogTool.showAlertDialog(this,"incorrect Hex.",true,false,null)
                     return@showInputAlertDialog
                 }
-                val hexUInt = inputHex.toUInt(16)
-                ConfigManager.getConfigs { Config0, Config1, Config2, Config3 ->
-                    ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,hexUInt,Config1,Config2,Config3,{
+                val Config0 = inputHex.toUInt(16)
+                val Config1 = _button_config_1.text.toString().toUInt(16)
+                val Config2 = _button_config_2.text.toString().toUInt(16)
+                val Config3 = _button_config_3.text.toString().toUInt(16)
+
+                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
                         this.initUI()
-                    })
-                }
+                })
 
         })
 
@@ -284,12 +300,15 @@ class ISPActivity : AppCompatActivity() {
                     DialogTool.showAlertDialog(this,"incorrect Hex.",true,false,null)
                     return@showInputAlertDialog
                 }
-                val hexUInt = inputHex.toUInt(16)
-                ConfigManager.getConfigs { Config0, Config1, Config2, Config3 ->
-                    ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,hexUInt,Config2,Config3,{
-                        this.initUI()
-                    })
-                }
+
+                val Config0 = _button_config_0.text.toString().toUInt(16)
+                val Config1 = inputHex.toUInt(16)
+                val Config2 = _button_config_2.text.toString().toUInt(16)
+                val Config3 = _button_config_3.text.toString().toUInt(16)
+
+                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                    this.initUI()
+                })
         })
     }
     private val onConfigClickButton2 = View.OnClickListener {
@@ -305,12 +324,14 @@ class ISPActivity : AppCompatActivity() {
                     DialogTool.showAlertDialog(this,"incorrect Hex.",true,false,null)
                     return@showInputAlertDialog
                 }
-                val hexUInt = inputHex.toUInt(16)
-                ConfigManager.getConfigs { Config0, Config1, Config2, Config3 ->
-                    ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,hexUInt,Config3,{
-                        this.initUI()
-                    })
-                }
+                val Config0 = _button_config_0.text.toString().toUInt(16)
+                val Config1 = _button_config_1.text.toString().toUInt(16)
+                val Config2 = inputHex.toUInt(16)
+                val Config3 = _button_config_3.text.toString().toUInt(16)
+
+                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                    this.initUI()
+                })
         })
     }
     private val onConfigClickButton3 = View.OnClickListener {
@@ -326,12 +347,15 @@ class ISPActivity : AppCompatActivity() {
                     DialogTool.showAlertDialog(this,"incorrect Hex.",true,false,null)
                     return@showInputAlertDialog
                 }
-                val hexUInt = inputHex.toUInt(16)
-                ConfigManager.getConfigs { Config0, Config1, Config2, Config3 ->
-                    ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,hexUInt,{
-                        this.initUI()
-                    })
-                }
+
+                val Config0 = _button_config_0.text.toString().toUInt(16)
+                val Config1 = _button_config_1.text.toString().toUInt(16)
+                val Config2 = _button_config_2.text.toString().toUInt(16)
+                val Config3 = inputHex.toUInt(16)
+
+                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                    this.initUI()
+                })
         })
     }
     /**********************************************************************************************/
@@ -451,7 +475,7 @@ class ISPActivity : AppCompatActivity() {
                                 _checkbox_aprom.isChecked = true
                                 _checkbox_aprom.isEnabled = true
                                 _progressBar.visibility = View.INVISIBLE
-                                DialogTool.dismissProgressDialog()
+                                DialogTool.dismissDialog()
                             }
                         }
 
@@ -525,7 +549,7 @@ class ISPActivity : AppCompatActivity() {
                                 _checkbox_date_flash.isChecked = true
                                 _checkbox_date_flash.isEnabled = true
                                 _progressBar.visibility = View.INVISIBLE
-                                DialogTool.dismissProgressDialog()
+                                DialogTool.dismissDialog()
                             }
                         }
 
@@ -541,7 +565,7 @@ class ISPActivity : AppCompatActivity() {
         Log.i(TAG, "onBurnClickButton")
 
         if(_checkbox_erase_all.isChecked == false && _checkbox_aprom.isChecked == false && _checkbox_date_flash.isChecked == false && _checkbox_rest_and_run.isChecked == false ){
-            DialogTool.showAlertDialog(this,"Please choose an function",true,false,null)
+            DialogTool.showAlertDialog(this,"Please choose a function",true,false,null)
             return@OnClickListener
         }
 
@@ -570,12 +594,12 @@ class ISPActivity : AppCompatActivity() {
                 }
                 ISPManager.sendCMD_ERASE_ALL(USBDevice, callback = { readArray, isChackSum ->
                     runOnUiThread {
-                        DialogTool.dismissProgressDialog()
+                        DialogTool.dismissDialog()
                     }
                     if(isChackSum == false){
                         hasFaile = true
                         runOnUiThread {
-                            DialogTool.showAlertDialog(this,"Erase All Faile.",true,false,null)
+                            DialogTool.showAlertDialog(this,"Erase All Failed.",true,false,null)
                         }
                     }
                 })
@@ -596,12 +620,12 @@ class ISPActivity : AppCompatActivity() {
                     runOnUiThread {
                         DialogTool.upDataProgressDialog(progress)
                         if (progress == 100) {
-                            DialogTool.dismissProgressDialog()
+                            DialogTool.dismissDialog()
                         }
                         if (progress == -1) {
-                            DialogTool.dismissProgressDialog()
+                            DialogTool.dismissDialog()
                             hasFaile = true
-                            DialogTool.showAlertDialog(this,"burn APROM Faile.",true,false,null)
+                            DialogTool.showAlertDialog(this,"burn APROM Failed.",true,false,null)
                         }
                     }
                 })
@@ -623,12 +647,12 @@ class ISPActivity : AppCompatActivity() {
                     runOnUiThread {
                         DialogTool.upDataProgressDialog(progress)
                         if (progress == 100) {
-                            DialogTool.dismissProgressDialog()
+                            DialogTool.dismissDialog()
                         }
                         if (progress == -1) {
-                            DialogTool.dismissProgressDialog()
+                            DialogTool.dismissDialog()
                             hasFaile = true
-                            DialogTool.showAlertDialog(this,"burn DataFlash Faile.",true,false,null)
+                            DialogTool.showAlertDialog(this,"burn DataFlash Failed.",true,false,null)
                         }
                     }
                 })
@@ -638,9 +662,20 @@ class ISPActivity : AppCompatActivity() {
                 runOnUiThread {
                     DialogTool.showProgressDialog(this, "Burn", "Reset and Run now.", true)
                 }
-               ISPManager.sendCMD_RUN_APROM(USBDevice, callback = {
-                   DialogTool.dismissProgressDialog()
-               })
+                ISPManager.sendCMD_RUN_APROM(USBDevice, callback = {
+                    runOnUiThread {
+                        DialogTool.showAlertDialog(
+                            this,
+                            "Reset and Run finish,need re plugin to connect.",
+                            true,
+                            false,
+                            callback = { isOk, isNo ->
+                                val intent = Intent(this, MainActivity::class.java)
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                this.startActivity(intent)
+                            })
+                    }
+                })
             }
         }
 

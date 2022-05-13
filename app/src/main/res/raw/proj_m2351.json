@@ -7,7 +7,7 @@
       "subConfigs": [
         {
           "name": "CWDTEN[2]",
-          "description": "Watchdog Timer Hardware Enable Bit",
+          "description": "Watchdog Timer Hardware Enable Bit.\nCWDTEN[2:0] is CONFIG0[31][4][3],\n011 = WDT hardware enable function is active.\n111 = WDT hardware enable function is inactive, WDT clock source only can be changed in this case.\nOthers = WDT hardware enable function is active. WDT clock is always on. ",
           "offset": 31,
           "length": 1,
           "values": "1",
@@ -16,8 +16,8 @@
             "1"
           ],
           "optionDescription": [
-            "0 = Please refer to the spec for detail",
-            "1 = Please refer to the spec for detail"
+            "CONFIG0[31] = 0",
+            "CONFIG0[31] = 1"
           ]
         },
         {
@@ -169,7 +169,7 @@
         },
         {
           "name": "CWDTEN[1:0]",
-          "description": "Watchdog Timer Hardware Enable Bit",
+          "description": "Watchdog Timer Hardware Enable Bit.\nCWDTEN[2:0] is CONFIG0[31][4][3],\n011 = WDT hardware enable function is active.\n111 = WDT hardware enable function is inactive, WDT clock source only can be changed in this case.\nOthers = WDT hardware enable function is active. WDT clock is always on. ",
           "offset": 3,
           "length": 2,
           "values": "01",
@@ -180,10 +180,10 @@
             "11"
           ],
           "optionDescription": [
-            "00 = Please refer to the spec for detail",
-            "01 = Please refer to the spec for detail",
-            "10 = Please refer to the spec for detail",
-            "11 = Please refer to the spec for detail"
+            "CONFIG0[4][3] = 00",
+            "CONFIG0[4][3] = 01",
+            "CONFIG0[4][3] = 10",
+            "CONFIG0[4][3] = 11"
           ]
         }
       ]
@@ -213,20 +213,14 @@
             "001",
             "010",
             "011",
-            "100",
-            "101",
-            "110",
             "111"
           ],
           "optionDescription": [
-            "000 = Please refer to the spec for detail",
-            "001 = Please refer to the spec for detail",
-            "010 = Please refer to the spec for detail",
-            "011 = Please refer to the spec for detail",
-            "100 = Please refer to the spec for detail",
-            "101 = Please refer to the spec for detail",
-            "110 = Please refer to the spec for detail",
-            "111 = Please refer to the spec for detail"
+            "000 = UART1_TXD (PB.7), UART1_RXD (PB.6)",
+            "001 = UART1_TXD (PA.9), UART1_RXD (PA.8)",
+            "010 = UART1_TXD (PF.0), UART1_RXD (PF.1)",
+            "011 = UART1_TXD (PB.3), UART1_RXD (PB.2)",
+            "111 = UART1_TXD (PA.3), UART1_RXD (PA.2) "
           ]
         }
       ]
