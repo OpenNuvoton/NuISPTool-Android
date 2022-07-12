@@ -118,15 +118,15 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="5dp"
                         android:text="FFFFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="8sp" />
 
                     <TextView
                         android:id="@+id/devies_config"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Config 0"
                         android:layout_marginTop="-5dp"
+                        android:text="Config 0"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -143,14 +143,14 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="5dp"
                         android:text="FFFFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="8sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Config 1"
                         android:layout_marginTop="-5dp"
+                        android:text="Config 1"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -167,14 +167,14 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="5dp"
                         android:text="FFFFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="8sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Config 2"
                         android:layout_marginTop="-5dp"
+                        android:text="Config 2"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -192,14 +192,14 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:text="FFFFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="8sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Config 3"
                         android:layout_marginTop="-5dp"
+                        android:text="Config 3"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -217,6 +217,35 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="APROM" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_address"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/x0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0x"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/textAddress"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789ABCDEFabcdef"
+                    android:hint="00000000"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
 
                 <ImageButton
                     android:id="@+id/select_aprom"
@@ -268,7 +297,7 @@
                 <Button
                     android:id="@+id/button_burn"
                     android:layout_width="80dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:layout_marginRight="30dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/red"
@@ -290,8 +319,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
-            android:background="@color/cardview_shadow_end_color"
-            >
+            android:background="@color/cardview_shadow_end_color">
 
             <RadioButton
                 android:id="@+id/radioButton_aprom"
@@ -321,13 +349,13 @@
                 android:layout_below="@+id/radioButton_dataflash"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
                 android:scrollbars="vertical"
                 android:singleLine="false"
-                android:layout_margin="5dp"
                 android:textSize="11sp" />
 
             <TextView
@@ -357,8 +385,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_margin="150dp"
                 android:indeterminate="true"
-                android:visibility="invisible"
-                />
+                android:visibility="invisible" />
 
         </RelativeLayout>
 

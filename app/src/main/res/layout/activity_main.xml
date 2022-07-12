@@ -48,104 +48,161 @@
         </RelativeLayout>
 
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:visibility="gone"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Connection Interface："
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="35dp"
-            android:textColor="@color/red"
-            />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.8"
-            android:orientation="horizontal">
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:text="Device Interface (Nulink)："
+                android:textColor="@color/red" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_SPI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="SPI" />
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_CAN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CAN" />
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_UART"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:text="UART"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_I2C"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="I2C" />
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_RS485"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="RS485" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+
 
             </LinearLayout>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/red"
+                android:text="APP InterFace：" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/RadioButton_USB"
+                android:orientation="horizontal">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="USB" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/RadioButton_SPI"
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="SPI" />
-
-                <RadioButton
-                    android:id="@+id/RadioButton_UART"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/RadioButton_USB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="USB(OTG)" />
+                    <RadioButton
+                        android:id="@+id/RadioButton_WiFi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="WiFi" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:visibility="invisible"
-                    android:text="UART" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/RadioButton_BLE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BLE" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/RadioButton_I2C"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="I2C" />
-
-                <RadioButton
-                    android:id="@+id/RadioButton_RS485"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="RS485" />
-
-                <RadioButton
-                    android:id="@+id/RadioButton_CAN"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    android:text="CAN" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"></LinearLayout>
 
 
         </LinearLayout>
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -197,7 +254,7 @@
             android:backgroundTint="@color/red"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:text="Connect" />
+            android:text="Open" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

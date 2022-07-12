@@ -24,9 +24,84 @@ enum class ISPCommands constructor(val value: UInt){
     CMD_UPDATE_SPIFLASH  ((0x000000D1).toUInt()),
 }
 
+enum class ISPCanCommands constructor(val value: UInt){
+    //value 為 Int
+    CMD_CAN_READ_CONFIG    ((0xA2000000).toUInt()),
+    CMD_CAN_UPDATE_APROM	 ((0xAB000000).toUInt()),
+    CMD_CAN_GET_DEVICE    ((0xB1000000).toUInt()),
+    CMD_CAN_RUN_APROM	 ((0xAB000000).toUInt()),
+}
+
 object ISPCommandTool {
 
     private var TAG = "ISPCommandTool"
+
+    fun toCanRunAPROM_CMD():ByteArray{
+        val cmdBytes = HEXTool.UIntTo4Bytes(ISPCanCommands.CMD_CAN_RUN_APROM.value)
+        var sendBytes = byteArrayOf()
+        sendBytes = byteArrayOf(0x00,0x00) + cmdBytes
+
+        while (sendBytes.size != 64){
+            sendBytes = sendBytes + byteArrayOf(0x00)
+        }
+        return sendBytes
+    }
+
+    fun toCanGetDeviceCMD():ByteArray{
+        val cmdBytes = HEXTool.UIntTo4Bytes(ISPCanCommands.CMD_CAN_GET_DEVICE.value)
+        var sendBytes = byteArrayOf()
+        sendBytes = byteArrayOf(0x00,0x00) + cmdBytes
+
+        while (sendBytes.size != 64){
+            sendBytes = sendBytes + byteArrayOf(0x00)
+        }
+        return sendBytes
+    }
+
+    fun toCanReadConfigCMD(index:Int):ByteArray{
+
+        var configAddress = byteArrayOf()
+        when(index){
+            1 ->{configAddress = byteArrayOf(0x04,0x00,0x30,0x00)}
+            2 ->{configAddress = byteArrayOf(0x08,0x00,0x30,0x00)}
+            3 ->{configAddress = byteArrayOf(0x12,0x00,0x30,0x00)}
+            else ->{ //0
+                configAddress = byteArrayOf(0x00,0x00,0x30,0x00)
+            }
+        }
+
+        val cmdBytes = HEXTool.UIntTo4Bytes(ISPCanCommands.CMD_CAN_READ_CONFIG.value)
+        var sendBytes = byteArrayOf()
+        sendBytes = byteArrayOf(0x00,0x00) + cmdBytes + configAddress
+
+        while (sendBytes.size != 64){
+            sendBytes = sendBytes + byteArrayOf(0x00)
+        }
+        return sendBytes
+    }
+
+    fun toCanUpdateConfigCMD(index:Int,Uconfig:UInt):ByteArray{
+
+        var configAddress = byteArrayOf()
+        when(index){
+            1 ->{configAddress = byteArrayOf(0x04,0x00,0x30,0x00)}
+            2 ->{configAddress = byteArrayOf(0x08,0x00,0x30,0x00)}
+            3 ->{configAddress = byteArrayOf(0x12,0x00,0x30,0x00)}
+            else ->{ //0
+                configAddress = byteArrayOf(0x00,0x00,0x30,0x00)
+            }
+        }
+
+        val config = HEXTool.UIntTo4Bytes(Uconfig)
+
+        var sendBytes = byteArrayOf()
+        sendBytes = byteArrayOf(0x00,0x00) +configAddress +config
+
+        while (sendBytes.size != 64){
+            sendBytes = sendBytes + byteArrayOf(0x00)
+        }
+        return sendBytes
+    }
 
     fun toCMD(CMD:ISPCommands,packetNumber:UInt):ByteArray{
 
@@ -42,6 +117,22 @@ object ISPCommandTool {
 
         var sendBytes = byteArrayOf()
         sendBytes = cmdBytes + packetNumberBytes + noneBytes
+
+        return sendBytes
+    }
+
+    /**
+     * 燒錄 CAN Bin 支援 APROM ＆ DataFlash
+     */
+    fun toUpdataBin_CAN_CMD(cmd: ISPCanCommands, startAddress: ByteArray, size: Int, data: ByteArray): ByteArray {
+
+        var sendBytes = byteArrayOf()
+
+        sendBytes = byteArrayOf(0x00,0x00) + startAddress  + data
+
+        while (sendBytes.size != 64){
+            sendBytes = sendBytes + byteArrayOf(0x00)
+        }
 
         return sendBytes
     }
@@ -123,6 +214,11 @@ object ISPCommandTool {
         return  HEXTool.toHexString(deviceIDArray)
     }
 
+    fun toCAN_DeviceID(readBuffer:ByteArray):String{
+        val deviceIDArray :  ByteArray = byteArrayOf(readBuffer[7])+byteArrayOf(readBuffer[6])+byteArrayOf(readBuffer[5])+byteArrayOf(readBuffer[4])
+        return  HEXTool.toHexString(deviceIDArray)
+    }
+
     fun toFirmwareVersion(readBuffer:ByteArray):String{
         val deviceIDArray :  ByteArray = byteArrayOf(readBuffer[11])+byteArrayOf(readBuffer[10])+byteArrayOf(readBuffer[9])+byteArrayOf(readBuffer[8])
         return  HEXTool.toHexString(deviceIDArray)
@@ -154,4 +250,6 @@ object ISPCommandTool {
 
         return  HEXTool.bytesToInt(deviceIDArray)
     }
+
+
 }

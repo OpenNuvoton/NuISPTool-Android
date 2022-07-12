@@ -56,7 +56,10 @@ public class PermissionManager implements EasyPermissions.PermissionCallbacks {
         BLUETOOTH_ADMIN(Manifest.permission.BLUETOOTH_ADMIN, 7),
         READ_EXTERNAL_STORAGE(Manifest.permission.READ_EXTERNAL_STORAGE, 5),
         WRITE_EXTERNAL_STORAGE(Manifest.permission.WRITE_EXTERNAL_STORAGE, 6),
+        BLUETOOTH_SCAN(Manifest.permission.BLUETOOTH_SCAN, 9),
+        BLUETOOTH_CONNECT(Manifest.permission.BLUETOOTH_CONNECT, 10),
         MANAGE_EXTERNAL_STORAGE(Manifest.permission.MANAGE_EXTERNAL_STORAGE, 8);
+
 
 
         private final String _name;

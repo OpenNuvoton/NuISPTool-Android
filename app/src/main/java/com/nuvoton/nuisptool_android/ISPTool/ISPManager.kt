@@ -6,6 +6,9 @@ import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import androidx.annotation.RequiresApi
+import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeCmdManager
+import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeData
+import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeDataManager
 import com.nuvoton.nuisptool_android.Util.DialogTool
 import com.nuvoton.nuisptool_android.Util.Log
 import com.nuvoton.nuisptool_android.Util.HEXTool
@@ -14,14 +17,17 @@ import kotlin.concurrent.thread
 enum class NulinkInterfaceType constructor(val value: Byte) {
 
     USB    (0x00),
-//    INTF_HID    (0x01),
+//  HID    (0x01),
     UART   (0x02),
     SPI    (0x03),
     I2C    (0x04),
     RS485  (0x05),
     CAN    (0x06),
+    WiFi   (0x07),
+    BLE    (0x08)
 }
 
+@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 object ISPManager {
     /**
      * Config 設定值
@@ -34,7 +40,7 @@ object ISPManager {
     private val timeOut = 100
     private val isSearchLoop = false
 
-    private var packetNumber: UInt = (0x00000005).toUInt()
+    public var packetNumber: UInt = (0x00000005).toUInt()
     public var interfaceType : NulinkInterfaceType = NulinkInterfaceType.USB
 
     private var _readListener: ((ByteArray) -> Unit)? = null
@@ -43,9 +49,138 @@ object ISPManager {
 //        _byteArrayResultListener = callbacks
 //    }
 
-    fun sendCMD_UPDATE_BIN(cmd: ISPCommands ,usbDevice: UsbDevice,sendByteArray:ByteArray,startAddress:UInt, callback: ((ByteArray?, Int) -> Unit)) {
+
+    fun sendCMD_CAN_GET_DEVICE( callback: ((ByteArray?) -> Unit)) {
+
+        val cmd = ISPCanCommands.CMD_CAN_GET_DEVICE
+        val sendBuffer = ISPCommandTool.toCanGetDeviceCMD()
+        thread {
+            this.executeWriteRead(sendBuffer, 100, callback = { readBuffer, isTimeout ->
+                callback.invoke(readBuffer)
+            })
+        }
+
+    }
+
+    private fun sendCMD_CAN_READ_CONFIG( callback: ((ByteArray?) -> Unit)){
+
+        var configbyteArray = byteArrayOf(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)
+
+        val sendBuffer0 = ISPCommandTool.toCanReadConfigCMD(0)
+        this.write( sendBuffer0)
+        val readBuffer0 = this.read()
+
+        Thread.sleep(100)
+
+        val sendBuffer1 = ISPCommandTool.toCanReadConfigCMD(1)
+        this.write( sendBuffer1)
+        val readBuffer1 = this.read()
+
+        Thread.sleep(100)
+
+        val sendBuffer2 = ISPCommandTool.toCanReadConfigCMD(2)
+        this.write( sendBuffer2)
+        val readBuffer2 = this.read()
+
+        Thread.sleep(100)
+
+        val sendBuffer3 = ISPCommandTool.toCanReadConfigCMD(3)
+        this.write( sendBuffer3)
+        val readBuffer3 = this.read()
+
+        configbyteArray = configbyteArray + readBuffer0!!.copyOfRange(4,8) + readBuffer1!!.copyOfRange(4,8) + readBuffer2!!.copyOfRange(4,8) + readBuffer3!!.copyOfRange(4,8)
+
+        callback.invoke(configbyteArray)
+    }
+
+    private fun sendCMD_CAN_UPDATE_CONFIG(config0: UInt,config1: UInt,config2: UInt,config3: UInt, callback: ((ByteArray?) -> Unit)) {
+
+        var configbyteArray = byteArrayOf(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)
+
+        val sendBuffer0 = ISPCommandTool.toCanUpdateConfigCMD(0,config0)
+        this.write( sendBuffer0)
+        val readBuffer0 = this.read()
+
+        val sendBuffer1 = ISPCommandTool.toCanUpdateConfigCMD(1,config1)
+        this.write( sendBuffer1)
+        val readBuffer1 = this.read()
+
+        val sendBuffer2 = ISPCommandTool.toCanUpdateConfigCMD(2,config2)
+        this.write( sendBuffer2)
+        val readBuffer2 = this.read()
+
+        val sendBuffer3 = ISPCommandTool.toCanUpdateConfigCMD(3,config3)
+        this.write( sendBuffer3)
+        val readBuffer3 = this.read()
+
+        configbyteArray = configbyteArray + readBuffer0!!.copyOfRange(4,8) + readBuffer1!!.copyOfRange(4,8) + readBuffer2!!.copyOfRange(4,8) + readBuffer3!!.copyOfRange(4,8)
+
+        callback.invoke(configbyteArray)
+    }
+
+    fun sendCMD_CAN_UPDATE_BIN( sendByteArray:ByteArray,startAddress:UInt, callback: ((ByteArray?, Int) -> Unit)) {
+
+        var remainDataList: List<ByteArray> = listOf()
+        var dataArray = byteArrayOf()
+        var index = 0
+
+        for ( sendByte in sendByteArray){
+            dataArray = dataArray + sendByte
+            index = index + 1
+            if(index == 4){
+                remainDataList = remainDataList + dataArray.clone()
+                dataArray = byteArrayOf()
+                index = 0
+            }
+        }
+        if(dataArray.isNotEmpty()){
+            //還有剩
+            for(i in dataArray.size+1..4){
+                dataArray = dataArray + 0x00 //後面補 0x00
+            }
+            if(dataArray.size == 4){
+                remainDataList = remainDataList + dataArray.clone()
+            }
+        }
+
+        Log.i("ISPManager", "CAN_UPDATE  size:"+sendByteArray.size+"  allPackNum:"+dataArray.size)
+
+        var address = HEXTool.UIntTo4Bytes(startAddress)
+
+        for (i in 0..remainDataList.size-1){
+
+            var sendBuffer = ISPCommandTool.toUpdataBin_CAN_CMD(ISPCanCommands.CMD_CAN_UPDATE_APROM , address , sendByteArray.size ,remainDataList[i] )
+            this.write( sendBuffer)
+            var readBuffer = this.read()
+            var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
+
+            address = HEXTool.UIntTo4Bytes(HEXTool.bytesToUInt(address) + 4u)
+
+            if(isChecksum != true){
+                callback.invoke(readBuffer, -1)
+                return
+            }
+            callback.invoke(readBuffer, (i.toDouble() / (remainDataList.size -1) * 100).toInt())
+        }
+    }
+
+    fun sendCMD_UPDATE_BIN(cmd: ISPCommands ,sendByteArray:ByteArray,startAddress:UInt, callback: ((ByteArray?, Int) -> Unit)) {
+
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_UPDATE_BIN(cmd,sendByteArray,startAddress, callback = { readBuffer , P ->
+                callback.invoke(readBuffer, P)
+            })
+            return
+        }
 
         if(cmd != ISPCommands.CMD_UPDATE_APROM && cmd != ISPCommands.CMD_UPDATE_DATAFLASH){
+            return
+        }
+
+        //如果是CAN
+        if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
+            this.sendCMD_CAN_UPDATE_BIN(sendByteArray,startAddress,callback)
             return
         }
 
@@ -81,8 +216,8 @@ object ISPManager {
         }
         Log.i("ISPManager", "CMD_UPDATE   CMD:"+cmd.toString()+"  size:"+sendByteArray.size+"  allPackNum:"+dataArray.size+1)
         var sendBuffer = ISPCommandTool.toUpdataBin_CMD(cmd, packetNumber , startAddress , sendByteArray.size , firstData , true)
-        this.write(usbDevice, sendBuffer)
-        var readBuffer = this.read(usbDevice)
+        this.write( sendBuffer)
+        var readBuffer = this.read()
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
 
         callback.invoke(readBuffer, 0) //5% 起跳
@@ -94,8 +229,8 @@ object ISPManager {
 
         for (i in 0..remainDataList.size-1){
             sendBuffer = ISPCommandTool.toUpdataBin_CMD(cmd, packetNumber , startAddress , sendByteArray.size , remainDataList[i] , false)
-            this.write(usbDevice, sendBuffer)
-            readBuffer = this.read(usbDevice)
+            this.write( sendBuffer)
+            readBuffer = this.read()
             isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
             if(isChecksum != true){
                 callback.invoke(readBuffer, -1)
@@ -107,59 +242,125 @@ object ISPManager {
         callback.invoke(readBuffer, 100)
     }
 
-    fun sendCMD_ERASE_ALL(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean) -> Unit)) {
+
+    fun sendCMD_ERASE_ALL( callback: ((ByteArray?, Boolean) -> Unit)) {
+
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_ERASE_ALL { readBuffer, isChecksum ->
+                callback.invoke(readBuffer, isChecksum)
+            }
+            return
+        }
 
         val cmd = ISPCommands.CMD_ERASE_ALL
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
-        val readBuffer = this.read(usbDevice)
+
+        this.write( sendBuffer)
+        val readBuffer = this.read()
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
 
         callback.invoke(readBuffer, isChecksum)
     }
 
-    fun sendCMD_READ_CONFIG(usbDevice: UsbDevice, callback: ((ByteArray?) -> Unit)) {
+    fun sendCMD_READ_CONFIG( callback: ((ByteArray?) -> Unit)) {
+
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_READ_CONFIG {
+                callback.invoke(it)
+            }
+            return
+        }
+
+        //如果是CAN
+        if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
+            this.sendCMD_CAN_READ_CONFIG(callback = {
+                callback.invoke(it)
+            })
+            return
+        }
 
         val cmd = ISPCommands.CMD_READ_CONFIG
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
-        val readBuffer = this.read(usbDevice)
+        this.write( sendBuffer)
+        val readBuffer = this.read()
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
 
         callback.invoke(readBuffer)
     }
 
-    fun sendCMD_GET_FWVER(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean) -> Unit)) {
+    fun sendCMD_GET_FWVER(callback: ((ByteArray?, Boolean) -> Unit)) {
 
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_GET_FWVER { readBuffer, isChecksum ->
+                callback.invoke(readBuffer, isChecksum)
+            }
+            return
+        }
         val cmd = ISPCommands.CMD_GET_FWVER
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
-        val readBuffer = this.read(usbDevice)
+        this.write( sendBuffer)
+        val readBuffer = this.read()
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
 
         callback.invoke(readBuffer, isChecksum)
     }
 
-    fun sendCMD_RUN_APROM(usbDevice: UsbDevice, callback: ((Boolean) -> Unit)) {
+    fun sendCMD_RUN_APROM( callback: ((Boolean) -> Unit)) {
+
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_RUN_APROM {
+                callback.invoke(it)
+            }
+            return
+        }
+
+        if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
+            val sendBuffer = ISPCommandTool.toCanRunAPROM_CMD()
+            this.write( sendBuffer)
+            callback.invoke(true)
+            return
+        }
 
         val cmd = ISPCommands.CMD_RUN_APROM
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
+        this.write( sendBuffer)
 
         callback.invoke(true)
     }
 
-    fun sendCMD_UPDATE_CONFIG(usbDevice: UsbDevice,config0: UInt,config1: UInt,config2: UInt,config3: UInt, callback: ((ByteArray?) -> Unit)) {
+    fun sendCMD_UPDATE_CONFIG(config0: UInt,config1: UInt,config2: UInt,config3: UInt, callback: ((ByteArray?) -> Unit)) {
 
-        sendCMD_ERASE_ALL(usbDevice) { readArray, isChackSum ->
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_UPDATE_CONFIG(config0,config1,config2,config3, callback = {
+                    callback.invoke(it)
+            })
+            return
+        }
+
+        //如果是CAN
+        if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
+            this.sendCMD_CAN_UPDATE_CONFIG(config0,config1,config2,config3, callback = {
+                callback.invoke(it)
+            })
+            return
+        }
+
+
+        sendCMD_ERASE_ALL() { readArray, isChackSum ->
+
             if (isChackSum != true) return@sendCMD_ERASE_ALL
 
             //config＿1  先寫死
             val cmd = ISPCommands.CMD_UPDATE_CONFIG
             val sendBuffer = ISPCommandTool.toUpdataCongigeCMD(config0, config1, config2,config3, packetNumber)
-            this.write(usbDevice, sendBuffer)
+            this.write( sendBuffer)
 
-            val readBuffer = this.read(usbDevice)
+            val readBuffer = this.read()
             var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
 
             callback.invoke(readBuffer)
@@ -167,16 +368,16 @@ object ISPManager {
 
     }
 
-    fun sendCMD_SYNC_PACKNO(usbDevice: UsbDevice, callback: ((ByteArray?) -> Unit)) {
+    fun sendCMD_SYNC_PACKNO( callback: ((ByteArray?) -> Unit)) {
 
         val cmd = ISPCommands.CMD_SYNC_PACKNO
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
-        val readBuffer = this.read(usbDevice)
+        this.write( sendBuffer)
+        val readBuffer = this.read()
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
     }
 
-    fun sendCMD_CONNECT(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean,isTimeout:Boolean) -> Unit)) {
+    fun sendCMD_CONNECT( callback: ((ByteArray?, Boolean,isTimeout:Boolean) -> Unit)) {
 
         this.packetNumber = (0x00000001).toUInt()
         val cmd = ISPCommands.CMD_CONNECT
@@ -184,7 +385,7 @@ object ISPManager {
 //        this.write(usbDevice, sendBuffer)
 //        val readBuffer = this.read(usbDevice)
         thread {
-            this.executeWriteRead(usbDevice,sendBuffer,100, callback = { readBuffer,isTimeout ->
+            this.executeWriteRead(sendBuffer,100, callback = { readBuffer,isTimeout ->
                 var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
                 callback.invoke(readBuffer, isChecksum,isTimeout)
             })
@@ -192,33 +393,46 @@ object ISPManager {
 
     }
 
-    fun sendCMD_GET_DEVICEID(usbDevice: UsbDevice, callback: ((ByteArray?, Boolean) -> Unit)) {
+    fun sendCMD_GET_DEVICEID( callback: ((ByteArray?, Boolean) -> Unit)) {
+
+        //如果是BLE
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            BluetoothLeCmdManager.sendCMD_GET_DEVICEID { readBuffer, isChecksum ->
+                callback.invoke(readBuffer,isChecksum)
+            }
+            return
+        }
 
         val cmd = ISPCommands.CMD_GET_DEVICEID
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-        this.write(usbDevice, sendBuffer)
-        val readBuffer = this.read(usbDevice)
+        this.write( sendBuffer)
+        val readBuffer = this.read()
         var isChecksum = this.isChecksum_PackNo(sendBuffer, readBuffer)
 
         callback.invoke(readBuffer,isChecksum)
     }
 
-    private fun sendCMD(usbDevice: UsbDevice, cmd: ISPCommands) {
+//    private fun sendCMD(usbDevice: UsbDevice, cmd: ISPCommands) {
+//
+//        thread {
+//            val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
+//            this.write(usbDevice, sendBuffer)
+//            val readBuffer = this.read(usbDevice)
+//            this.isChecksum_PackNo(sendBuffer, readBuffer)
+//
+//        }
+//    }
 
-        thread {
-            val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
-            this.write(usbDevice, sendBuffer)
-            val readBuffer = this.read(usbDevice)
-            this.isChecksum_PackNo(sendBuffer, readBuffer)
-
-        }
-    }
-
-    private fun isChecksum_PackNo(sendBuffer: ByteArray, readBuffer: ByteArray?): Boolean {
+    public fun isChecksum_PackNo(sendBuffer: ByteArray, readBuffer: ByteArray?): Boolean {
 
         if (readBuffer == null) {
             Log.i("isChecksum_PackNo", "readBuffer == null")
             return false
+        }
+
+        //如果是CAN
+        if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
+            return true
         }
 
         //checksum
@@ -247,7 +461,9 @@ object ISPManager {
     }
 
     @SuppressLint("NewApi")
-    private fun executeWriteRead(usbDevice: UsbDevice, cmdArray: ByteArray,timeoutIndex:Int,callback: (ByteArray?,isTimeout:Boolean) -> Unit){
+    private fun executeWriteRead( cmdArray: ByteArray,timeoutIndex:Int,callback: (ByteArray?,isTimeout:Boolean) -> Unit){
+
+        val usbDevice = OTGManager.get_USBDevice()
 
         if(interfaceType != NulinkInterfaceType.USB){
             for( i in 0..usbDevice.interfaceCount - 1){
@@ -300,7 +516,9 @@ object ISPManager {
     }
 
     @SuppressLint("NewApi")
-    private fun read(usbDevice: UsbDevice): ByteArray? {
+    private fun read(): ByteArray? {
+
+        val usbDevice = OTGManager.get_USBDevice()
 
         if(interfaceType != NulinkInterfaceType.USB){
             for( i in 0..usbDevice.interfaceCount - 1){
@@ -338,8 +556,9 @@ object ISPManager {
     }
 
     @SuppressLint("NewApi")
-    private fun write(usbDevice: UsbDevice, cmdArray: ByteArray) {
+    private fun write( cmdArray: ByteArray) {
 
+        val usbDevice = OTGManager.get_USBDevice()
 
         //替換掉nu-link2的暗號
         cmdArray.set(1, interfaceType.value)

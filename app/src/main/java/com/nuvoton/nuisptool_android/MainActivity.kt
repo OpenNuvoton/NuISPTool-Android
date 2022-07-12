@@ -3,6 +3,9 @@ package com.nuvoton.nuisptool_android
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.bluetooth.BluetoothProfile
+import android.bluetooth.le.ScanCallback
+import android.bluetooth.le.ScanResult
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
@@ -24,9 +27,16 @@ import com.nuvoton.nuisptool_android.Util.Log
 import com.nuvoton.nuisptool_android.Util.PermissionManager
 import java.util.ArrayList
 import android.widget.CompoundButton
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.list.listItems
+import com.afollestad.materialdialogs.list.updateListItems
+import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeCmdManager
+import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeData
+import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeDataManager
 import com.nuvoton.nuisptool_android.Util.DialogTool
+import kotlin.concurrent.thread
 
-
+@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class MainActivity : AppCompatActivity() {
 
     private var TAG = "MainActivity"
@@ -47,6 +57,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var _radioButton_I2C: RadioButton
     private lateinit var _radioButton_RS485: RadioButton
     private lateinit var _radioButton_CAN: RadioButton
+    private lateinit var _radioButton_WiFi: RadioButton
+    private lateinit var _radioButton_BLE: RadioButton
+
+    //BLE
+    private val _bdm = BluetoothLeDataManager.getInstance()
+    //SCAN
+    private var _scanResultArray: ArrayList<ScanResult> = ArrayList<ScanResult>()
+    private var _scanResultDeviceArray: ArrayList<String> = ArrayList<String>()
+    private lateinit var _alertDialog: MaterialDialog
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +96,11 @@ class MainActivity : AppCompatActivity() {
         _radioButton_RS485.setOnCheckedChangeListener(CompoundButtonOnCheckedChangeListener)
         _radioButton_CAN = findViewById<View>(R.id.RadioButton_CAN) as RadioButton
         _radioButton_CAN.setOnCheckedChangeListener(CompoundButtonOnCheckedChangeListener)
-        _radioButtonList = arrayOf(_radioButton_USB,_radioButton_UART,_radioButton_SPI,_radioButton_I2C,_radioButton_RS485,_radioButton_CAN)
+        _radioButton_WiFi = findViewById<View>(R.id.RadioButton_WiFi) as RadioButton
+        _radioButton_WiFi.setOnCheckedChangeListener(CompoundButtonOnCheckedChangeListener)
+        _radioButton_BLE = findViewById<View>(R.id.RadioButton_BLE) as RadioButton
+        _radioButton_BLE.setOnCheckedChangeListener(CompoundButtonOnCheckedChangeListener)
+        _radioButtonList = arrayOf(_radioButton_USB,_radioButton_UART,_radioButton_SPI,_radioButton_I2C,_radioButton_RS485,_radioButton_CAN,_radioButton_WiFi,_radioButton_BLE)
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R || Environment.isExternalStorageManager()) {
         } else {
@@ -86,10 +109,15 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        if(BluetoothLeCmdManager.BLE_DATA != null && BluetoothLeCmdManager.BLE_DATA!!.isConnect){
+            BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
+        }
+
         this.initUSBHost()
         this.initChipInfoData()
         ISPManager.interfaceType = NulinkInterfaceType.USB
-
+        BluetoothLeDataManager.context = this
+        setPermission()
     }
 
     override fun onResume() {
@@ -159,8 +187,43 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //如果是CAN
+        if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
+            ISPManager.sendCMD_CAN_GET_DEVICE( callback = {
+                runOnUiThread {
+                    DialogTool.dismissDialog()
+
+                    if (it == null) {
+                        Log.i(TAG, "sendCMD_CONNECT ---- is Not CAN InterFace")
+                        runOnUiThread {
+                            DialogTool.showAlertDialog(
+                                this,
+                                "is Not CAN InterFace",
+                                true,
+                                false,
+                                null
+                            )
+                        }
+                        return@runOnUiThread
+                    }
+                    _deviceID = ISPCommandTool.toCAN_DeviceID(it)
+                    Log.i(TAG, "toCAN_DeviceID ---- Device:$_deviceID")
+                    if (FileManager.getChipInfoByPDID(_deviceID!!) == null) {
+                        _mainMessageText.setText("Find Device: unknown Device")
+                        _connectDeviceButton.isEnabled = true
+                        _connectDeviceButton.setBackgroundColor(Color.RED)
+                        return@runOnUiThread
+                    }
+                    _mainMessageText.setText("Find Device: " + FileManager.CHIP_DATA.chipPdid.name)
+                    _connectDeviceButton.isEnabled = true
+                    _connectDeviceButton.setBackgroundColor(Color.RED)
+                }
+            })
+            return
+        }
+
         //送出指令
-        ISPManager.sendCMD_CONNECT(_USBDevice!!, callback = { byteArray, isChecksum, isTimeout ->
+        ISPManager.sendCMD_CONNECT( callback = { byteArray, isChecksum, isTimeout ->
 
             DialogTool.dismissDialog()
 
@@ -168,6 +231,7 @@ class MainActivity : AppCompatActivity() {
                 Log.i(TAG, "sendCMD_CONNECT ---- Search Device is time out.")
                 runOnUiThread {
                     DialogTool.showAlertDialog(this,"Search Device is time out.",true,false,null)
+
                 }
                 return@sendCMD_CONNECT
             }
@@ -180,14 +244,14 @@ class MainActivity : AppCompatActivity() {
                 return@sendCMD_CONNECT
             }
 
-            ISPManager.sendCMD_READ_CONFIG(_USBDevice!!, callback = {byteArray ->
-                if (isChecksum == false || byteArray == null) {
-                    Log.i(TAG, "sendCMD_READ_CONFIG ---- fail")
-                    return@sendCMD_READ_CONFIG
-                }
-            })
+//            ISPManager.sendCMD_READ_CONFIG(_USBDevice!!, callback = {byteArray ->
+//                if (isChecksum == false || byteArray == null) {
+//                    Log.i(TAG, "sendCMD_READ_CONFIG ---- fail")
+//                    return@sendCMD_READ_CONFIG
+//                }
+//            })
 
-            ISPManager.sendCMD_GET_DEVICEID(_USBDevice!!, callback = { byteArray, isChecksum ->
+            ISPManager.sendCMD_GET_DEVICEID( callback = { byteArray, isChecksum ->
                 runOnUiThread {
                     if (isChecksum == false || byteArray == null) {
                         Log.i(TAG, "sendCMD_GET_DEVICEID ---- fail")
@@ -248,6 +312,14 @@ class MainActivity : AppCompatActivity() {
                     Log.i(TAG, "onClickButton:_radioButton_CAN")
                     ISPManager.interfaceType = NulinkInterfaceType.CAN
                 }
+                _radioButton_WiFi -> {
+                    Log.i(TAG, "onClickButton:_radioButton_WiFi")
+                    ISPManager.interfaceType = NulinkInterfaceType.WiFi
+                }
+                _radioButton_BLE -> {
+                    Log.i(TAG, "onClickButton:_radioButton_BLE")
+                    ISPManager.interfaceType = NulinkInterfaceType.BLE
+                }
             }
 
             for(rb in _radioButtonList){
@@ -264,6 +336,30 @@ class MainActivity : AppCompatActivity() {
     private val onClickButton = View.OnClickListener {
         Log.i(TAG, "onClickButton")
 
+        if(BluetoothLeCmdManager.BLE_DATA != null && BluetoothLeCmdManager.BLE_DATA!!.isConnect){
+            BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
+            _findDeviceButton.setText("Find Device")
+            _mainMessageText.setText("BLE Status: DisConnected")
+            return@OnClickListener
+        }
+
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
+            if(_bdm.isBluetoothEnabled(this) == false){
+                Toast.makeText(this, "R.string.ble_not_supported", Toast.LENGTH_SHORT).show();
+                return@OnClickListener
+            }
+            if(_bdm.isGPSEnabled(this) == false){
+                Toast.makeText(this, "R.string.GPS_not_supported", Toast.LENGTH_SHORT).show();
+                return@OnClickListener
+            }
+            ScanBleDevice()
+            return@OnClickListener
+        }
+
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            return@OnClickListener
+        }
+
         OTGManager.startUsbConnecting(this)
 
     }
@@ -274,17 +370,86 @@ class MainActivity : AppCompatActivity() {
     private val onConnectClickButton = View.OnClickListener {
         Log.i(TAG, "onConnectClickButton")
 
-        if (_USBDevice == null) {
+        if(ISPManager.interfaceType == NulinkInterfaceType.BLE && BluetoothLeCmdManager.BLE_DATA != null){
+            val intent = Intent(applicationContext, ISPActivity::class.java).apply {
+                putExtra("DeviceID", _deviceID)
+            }
+            startActivity(intent)
+            return@OnClickListener
+        }
+
+        if (_USBDevice == null ) {
             return@OnClickListener
         }
 
         if (_deviceID == null) {
             return@OnClickListener
         }
+
         val intent = Intent(applicationContext, ISPActivity::class.java).apply {
             putExtra("DeviceID", _deviceID)
         }
         startActivity(intent)
+    }
+
+
+    //BLE////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /***
+     * 執行藍芽的無線write連接
+     */
+    private fun BleConnectToDevice(){
+
+        while (BluetoothLeCmdManager.WRITE_BC == null){
+            Thread.sleep(100)
+        }
+        BluetoothLeCmdManager.sendCMD_CONNECT( callback = { byteArray, isChecksum, isTimeout ->
+
+            DialogTool.dismissDialog()
+
+            if (isTimeout == true) {
+                Log.i(TAG, "sendCMD_CONNECT ---- Search Device is time out.")
+                runOnUiThread {
+                    DialogTool.showAlertDialog(this,"Search Device is time out.",true,false,null)
+                    BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
+                    _mainMessageText.setText("BLE Status: DisConnected")
+                }
+                return@sendCMD_CONNECT
+            }
+
+            if (isChecksum == false) {
+                Log.i(TAG, "sendCMD_CONNECT ---- is Not ISP InterFace")
+                runOnUiThread {
+                    DialogTool.showAlertDialog(this,"is Not USB InterFace",true,false,null)
+                    BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
+                    _mainMessageText.setText("BLE Status: DisConnected")
+                }
+                return@sendCMD_CONNECT
+            }
+
+            BluetoothLeCmdManager.sendCMD_GET_DEVICEID { byteArray, isChecksum ->
+                runOnUiThread {
+                    if (isChecksum == false || byteArray == null) {
+                        Log.i(TAG, "sendCMD_GET_DEVICEID ---- fail")
+                        BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
+                        return@runOnUiThread
+                    }
+                    _deviceID = ISPCommandTool.toDeviceID(byteArray)
+                    Log.i(TAG, "sendCMD_GET_DEVICEID ---- Device:$_deviceID")
+
+                    if (FileManager.getChipInfoByPDID(_deviceID!!) == null) {
+                        _mainMessageText.setText("Find Device: unknown Device")
+                        _connectDeviceButton.isEnabled = true
+                        _connectDeviceButton.setBackgroundColor(Color.RED)
+                        _findDeviceButton.setText("DisConnect BLE")
+                        return@runOnUiThread
+                    }
+                    _mainMessageText.setText("Find Device: " + FileManager.CHIP_DATA.chipPdid.name)
+                    _connectDeviceButton.isEnabled = true
+                    _connectDeviceButton.setBackgroundColor(Color.RED)
+                    _findDeviceButton.setText("DisConnect BLE")
+                }
+            }
+        })
     }
 
     private fun setPermission(): Boolean {
@@ -295,10 +460,188 @@ class MainActivity : AppCompatActivity() {
         permissionArray.add(PermissionManager.PermissionType.READ_EXTERNAL_STORAGE)
         permissionArray.add(PermissionManager.PermissionType.WRITE_EXTERNAL_STORAGE)
         permissionArray.add(PermissionManager.PermissionType.BLUETOOTH)
+        permissionArray.add(PermissionManager.PermissionType.BLUETOOTH_SCAN)
+        permissionArray.add(PermissionManager.PermissionType.BLUETOOTH_CONNECT)
         permissionArray.add(PermissionManager.PermissionType.MANAGE_EXTERNAL_STORAGE)
 
         pm.selfPermission("權限", permissionArray)
 
         return false
     }
+
+    /**
+     *  打開ＢＬＥ搜尋
+     */
+    private fun ScanBleDevice() {
+
+        if(_bdm.isBluetoothEnabled(BluetoothLeDataManager.context) == false){
+            Toast.makeText(BluetoothLeDataManager.context, "R.string.ble_not_supported", Toast.LENGTH_SHORT).show();
+            return
+        }
+        if(_bdm.isGPSEnabled(BluetoothLeDataManager.context) == false){
+            Toast.makeText(BluetoothLeDataManager.context, "R.string.GPS_not_supported", Toast.LENGTH_SHORT).show();
+            return
+        }
+
+        _scanResultDeviceArray.clear()
+        _scanResultArray.clear()
+
+        _alertDialog = MaterialDialog(BluetoothLeDataManager.context)
+            .cancelOnTouchOutside(false)
+            .cancelable(false)
+            .title(text = "BLE Device Scan...")
+            .listItems(items = _scanResultDeviceArray) { dialog, index, text ->
+                //TODO:點擊ＢＬＥ裝置事件
+
+                if(index >= _scanResultArray.size) return@listItems
+
+//                _bleDevice!!.setText("BLE Device: " + _scanResultArray.get(index).scanRecord!!.deviceName)
+                Log.d(TAG, "onOptionsItemSelected:" + _scanResultArray.get(index).scanRecord!!.deviceName + " " + _scanResultArray.get(index).device.uuids)
+                BluetoothLeCmdManager.BLE_DATA = _bdm.getBluetoothLeData(BluetoothLeDataManager.context, _scanResultArray.get(index).device.address)
+//                this!!.TempBleData_LED = _BleData // 提前存 不然返回會是空值 無法斷線
+
+                _bdm.scanLeDevice(false, BluetoothLeDataManager.context, scanCallback) //停止搜尋
+                this.connectBle(bleData = BluetoothLeCmdManager.BLE_DATA!!)//藍芽連線
+
+                _alertDialog.dismiss()
+            }
+            .negativeButton(null, "cancel") { materialDialog: MaterialDialog? ->
+                Log.d(TAG, "ScanBleDevice Cancel")
+                _bdm.scanLeDevice(false, BluetoothLeDataManager.context, scanCallback) //停止搜尋
+                _alertDialog.dismiss()
+
+            }
+        _alertDialog.show()
+
+        _bdm.scanLeDevice(true, BluetoothLeDataManager.context, scanCallback)
+
+//        Timer().schedule(10000){
+//            if (getActivity() == null || !isAdded()) return@schedule
+//            requireActivity().runOnUiThread {
+//                    _scanResultDeviceArray.add("** End of Search, If the device is not found, please try again. **")
+//                    _alertDialog.updateListItems(items = _scanResultDeviceArray)
+//                    _bdm.scanLeDevice(false, ResourceManager.context, scanCallback) //停止搜尋
+//            }
+//        }
+    }
+
+    /**
+     * ＢＬＥ搜尋結果
+     */
+    private val scanCallback: ScanCallback = object : ScanCallback() {
+        override fun onScanResult(callbackType: Int, result: ScanResult) {
+            super.onScanResult(callbackType, result)
+            Log.d(TAG, "onScanResult  callbackType:$callbackType   result:$result")
+
+            var displayName = result.scanRecord!!.deviceName +"\n"+result.device.address
+
+            if(result.scanRecord == null) return
+
+            if (!_scanResultArray.contains(result) && !_scanResultDeviceArray.contains(displayName)) {
+                if (result.scanRecord!!.deviceName != null) {
+                    _scanResultArray.add(result)
+                    Log.d(TAG, "onScanResult  deviceName:" + result.scanRecord!!.deviceName)
+                    _scanResultDeviceArray.add(displayName)
+                    _alertDialog.updateListItems(items = _scanResultDeviceArray)
+                }
+            }
+
+        }
+
+        override fun onBatchScanResults(results: List<ScanResult>) {
+            super.onBatchScanResults(results)
+            Log.d(TAG, "results:$results")
+        }
+
+        override fun onScanFailed(errorCode: Int) {
+            super.onScanFailed(errorCode)
+            Log.d(TAG, "errorCode:$errorCode")
+        }
+    }
+
+
+    /**
+     * ＢＬＥ藍芽連線
+     */
+    private fun connectBle(bleData: BluetoothLeData) {
+
+        if (bleData == null) {
+            return
+        }
+
+        runOnUiThread {
+//            _bleStatus!!.setText("BLE Status: CONNECTING")
+//            _bleStatus!!.setTextColor(Color.BLUE)
+        }
+
+        bleData.setOnStateChangeListener(onStateChangeListener)
+
+        bleData.connectLeDevice {
+            Log.i("MainActivity", "connectLeDevice:" + it)
+            if (it != true) {
+                onStateChangeListener.onStateChange(bleData.getbleMacAddress(), 0, 0)
+                return@connectLeDevice
+            }
+            for (bs in bleData.servicesDataArray) {
+                for (bc in bs.characteristicDataArray) {
+                    Log.i("MainActivity", "characteristic:" + bc.uuid)
+
+                    //專門用來寫入之特徵
+                    if (bc.uuid.indexOf("0000abf1") > -1) {
+                        BluetoothLeCmdManager.WRITE_BC = bc
+                    }
+
+                    //專門用來監聽之特徵
+                    if (bc.uuid.indexOf("0000abf2") > -1) {
+                        bc.setNotify(true, BluetoothLeCmdManager.BleNotifyListener)
+                        Log.i("MainActivity", "setNotify:" + bc.uuid)
+                    }
+
+                }
+            }
+
+            thread {
+                this.BleConnectToDevice()
+            }
+        }
+    }
+
+    /**
+     * 監聽ＢＬＥ連線變化
+     */
+    private var onStateChangeListener = BluetoothLeData.onStateChange { MAC, status, newState ->
+
+        Log.i("onStateChangeListener", "MAC:" + MAC + "  status:" + status + "  newState:" + newState)
+
+//        if (getActivity() == null || !isAdded()) return@onStateChange
+
+        runOnUiThread {
+            if (newState == BluetoothProfile.STATE_CONNECTING) {
+                runOnUiThread {
+//                    _bleStatus!!.setText("BLE Status: CONNECTING")
+//                    _bleStatus!!.setTextColor(Color.BLUE)
+                    _mainMessageText.setText("BLE Status: Connecting")
+                }
+            }
+
+            if (newState == BluetoothProfile.STATE_CONNECTED) {
+                runOnUiThread {
+                    _mainMessageText.setText("BLE Status: Connected")
+                    this.runOnUiThread {
+                        DialogTool.showProgressDialog(this,"Search Device","Please reset to ISP mode",false)
+                    }
+
+                }
+            }
+        }
+
+        if (newState == BluetoothProfile.STATE_DISCONNECTED) {
+            BluetoothLeCmdManager.WRITE_BC = null
+            runOnUiThread {
+                _mainMessageText.setText("BLE Status: DisConnected")
+            }
+        }
+    }
+
+
 }

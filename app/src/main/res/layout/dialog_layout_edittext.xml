@@ -11,7 +11,7 @@
             android:id="@+id/InputConfigText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textWebEmailAddress"
+            android:inputType="textVisiblePassword"
             android:digits="0123456789ABCDEFabcdef"
             android:maxLength="8"
             android:hint="Input Hex e.g.(FFFFFFFF)" />

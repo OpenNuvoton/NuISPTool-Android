@@ -1,6 +1,5 @@
 package com.nuvoton.nuisptool_android.Util
 
-import com.nuvoton.nuisptool_android.Util.HEXTool.getUIntAt
 import java.util.regex.Pattern
 
 object HEXTool{
@@ -55,6 +54,7 @@ object HEXTool{
                 ((this[idx + 1].toUInt() and 0xFFu) shl 16) or
                 ((this[idx + 2].toUInt() and 0xFFu) shl 8) or
                 (this[idx + 3].toUInt() and 0xFFu)
+
 
     fun toHexString(byteArray: ByteArray) : String {
         return byteArray.joinToString("") {

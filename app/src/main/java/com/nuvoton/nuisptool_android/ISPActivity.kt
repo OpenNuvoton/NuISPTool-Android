@@ -3,12 +3,15 @@ package com.nuvoton.nuisptool_android
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.hardware.usb.UsbDevice
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.IBinder
 import android.view.View
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,12 +22,16 @@ import java.io.FileInputStream
 import android.text.method.ScrollingMovementMethod
 import android.view.Display
 import android.view.LayoutInflater
+import androidx.annotation.RequiresApi
 import com.nuvoton.nuisptool_android.ISPTool.*
 import com.nuvoton.nuisptool_android.Util.DialogTool
 import com.nuvoton.nuisptool_android.Util.HEXTool.to2HexString
 import kotlin.concurrent.thread
+import android.view.MotionEvent
+import android.view.inputmethod.InputMethodManager
 
 
+@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class ISPActivity : AppCompatActivity() {
 
     private var TAG = "ISPActivity"
@@ -52,12 +59,13 @@ class ISPActivity : AppCompatActivity() {
     private lateinit var _button_config_1: Button
     private lateinit var _button_config_2: Button
     private lateinit var _button_config_3: Button
+    private lateinit var _editTextAddress : EditText
+    private lateinit var _checkbox_address :CheckBox
 
     private var apromBinDataText = ""
     private var _apromSize= 0
     private var flishBinDataText = ""
     private var _DataFlashSize = 0
-    private var _USBDevice: UsbDevice? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,6 +103,8 @@ class ISPActivity : AppCompatActivity() {
         _checkbox_date_flash = findViewById<View>(R.id.checkbox_date_flash) as CheckBox
         _checkbox_rest_and_run = findViewById<View>(R.id.checkbox_rest_and_run) as CheckBox
         _checkbox_erase_all = findViewById<View>(R.id.checkbox_erase_all) as CheckBox
+        _checkbox_address = findViewById<View>(R.id.checkbox_address) as CheckBox
+        _editTextAddress = findViewById<View>(R.id.textAddress) as EditText
         _radioButton_aprom = findViewById<View>(R.id.radioButton_aprom) as RadioButton
         _radioButton_dataflash = findViewById<View>(R.id.radioButton_dataflash) as RadioButton
         _radioButton_aprom.setOnCheckedChangeListener { compoundButton, b ->
@@ -115,7 +125,6 @@ class ISPActivity : AppCompatActivity() {
         }
         _text_message_display.setText(apromBinDataText)
 
-        _USBDevice = OTGManager.get_USBDevice()
     }
 
     override fun onResume() {
@@ -161,9 +170,7 @@ class ISPActivity : AppCompatActivity() {
 
         _text_devies_interface.setText("Connection Interface："+ISPManager.interfaceType.name)
 
-        val USBDevice = OTGManager.get_USBDevice()
-
-        ISPManager.sendCMD_GET_FWVER(USBDevice, callback = { readArray,isChecksum ->
+        ISPManager.sendCMD_GET_FWVER( callback = { readArray,isChecksum ->
             _text_devies_fw_ver.text = "Firmware：0x"+readArray?.let { ISPCommandTool.toFirmwareVersion(it) }
         })
 
@@ -189,7 +196,7 @@ class ISPActivity : AppCompatActivity() {
                         "but the correctness of the function is not guaranteed.",true,false,null)
             }
 
-            ISPManager.sendCMD_READ_CONFIG(USBDevice, callback = {
+            ISPManager.sendCMD_READ_CONFIG( callback = {
                 if (it == null) { return@sendCMD_READ_CONFIG}
                 var configText = "Config 0,1,2,3：\n"
                 val displayConfig0 = ISPCommandTool.toDisplayComfig0(it)
@@ -205,7 +212,7 @@ class ISPActivity : AppCompatActivity() {
             return
         }
 
-        ISPManager.sendCMD_READ_CONFIG(USBDevice, callback = {
+        ISPManager.sendCMD_READ_CONFIG( callback = {
             if (it == null) { return@sendCMD_READ_CONFIG}
 
             var configText = "Config 0,1,2,3：\n"
@@ -280,7 +287,7 @@ class ISPActivity : AppCompatActivity() {
                 val Config2 = _button_config_2.text.toString().toUInt(16)
                 val Config3 = _button_config_3.text.toString().toUInt(16)
 
-                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                ISPManager.sendCMD_UPDATE_CONFIG(Config0,Config1,Config2,Config3,{
                         this.initUI()
                 })
 
@@ -306,7 +313,7 @@ class ISPActivity : AppCompatActivity() {
                 val Config2 = _button_config_2.text.toString().toUInt(16)
                 val Config3 = _button_config_3.text.toString().toUInt(16)
 
-                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                ISPManager.sendCMD_UPDATE_CONFIG(Config0,Config1,Config2,Config3,{
                     this.initUI()
                 })
         })
@@ -329,7 +336,7 @@ class ISPActivity : AppCompatActivity() {
                 val Config2 = inputHex.toUInt(16)
                 val Config3 = _button_config_3.text.toString().toUInt(16)
 
-                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                ISPManager.sendCMD_UPDATE_CONFIG(Config0,Config1,Config2,Config3,{
                     this.initUI()
                 })
         })
@@ -353,7 +360,7 @@ class ISPActivity : AppCompatActivity() {
                 val Config2 = _button_config_2.text.toString().toUInt(16)
                 val Config3 = inputHex.toUInt(16)
 
-                ISPManager.sendCMD_UPDATE_CONFIG(_USBDevice!!,Config0,Config1,Config2,Config3,{
+                ISPManager.sendCMD_UPDATE_CONFIG(Config0,Config1,Config2,Config3,{
                     this.initUI()
                 })
         })
@@ -584,7 +591,6 @@ class ISPActivity : AppCompatActivity() {
         }
 
         //需要照順序 EraseALL> Config bit > APROM > DATAFLASH > Reset Run
-        val USBDevice = OTGManager.get_USBDevice()
         var hasFaile = false
         thread {
             //  Erase All
@@ -592,7 +598,7 @@ class ISPActivity : AppCompatActivity() {
                 runOnUiThread {
                     DialogTool.showProgressDialog(this, "Burn", "Erase All ing ...", false)
                 }
-                ISPManager.sendCMD_ERASE_ALL(USBDevice, callback = { readArray, isChackSum ->
+                ISPManager.sendCMD_ERASE_ALL( callback = { readArray, isChackSum ->
                     runOnUiThread {
                         DialogTool.dismissDialog()
                     }
@@ -612,8 +618,20 @@ class ISPActivity : AppCompatActivity() {
                 }
 
                 val dataArray = FileManager.APROM_BIN!!.byteArray
-                val startAddress = (0x00000000).toUByte().toUInt() //特殊chip以後可以改
-                ISPManager.sendCMD_UPDATE_BIN(ISPCommands.CMD_UPDATE_APROM,USBDevice,dataArray,startAddress,callback = { readArray, progress ->
+
+                var startAddress = (0x00000000).toUByte().toUInt()
+                if(!_editTextAddress.text.isNullOrEmpty() && _checkbox_address.isChecked == true){
+                    if(HEXTool.isHexString(_editTextAddress.text.toString()) == false) {
+                        //TODO 提醒使用者
+                        runOnUiThread {
+                            DialogTool.showAlertDialog(this,"incorrect Hex.",true,false,null)
+                        }
+                        return@thread
+                    }
+                    startAddress = _editTextAddress.text.toString().toUInt(16)
+                }
+
+                ISPManager.sendCMD_UPDATE_BIN(ISPCommands.CMD_UPDATE_APROM,dataArray,startAddress,callback = { readArray, progress ->
 
                     Log.i(TAG, "sendCMD_UPDATE_APROM : " + progress + "%")
 
@@ -640,7 +658,7 @@ class ISPActivity : AppCompatActivity() {
                 val dataArray = FileManager.DATAFLASH_BIN!!.byteArray
                 val startAddress = (0x00000000).toUByte().toUInt() //特殊chip以後可以改
 
-                ISPManager.sendCMD_UPDATE_BIN(ISPCommands.CMD_UPDATE_DATAFLASH,USBDevice,dataArray,startAddress,callback = { readArray, progress ->
+                ISPManager.sendCMD_UPDATE_BIN(ISPCommands.CMD_UPDATE_DATAFLASH,dataArray,startAddress,callback = { readArray, progress ->
 
                     Log.i(TAG, "CMD_UPDATE_DATAFLASH : " + progress + "%")
 
@@ -662,7 +680,7 @@ class ISPActivity : AppCompatActivity() {
                 runOnUiThread {
                     DialogTool.showProgressDialog(this, "Burn", "Reset and Run now.", true)
                 }
-                ISPManager.sendCMD_RUN_APROM(USBDevice, callback = {
+                ISPManager.sendCMD_RUN_APROM( callback = {
                     runOnUiThread {
                         DialogTool.showAlertDialog(
                             this,
@@ -683,4 +701,34 @@ class ISPActivity : AppCompatActivity() {
 
     }
 
+//鍵盤處理////////////////////////////////////////////////////////////////////////////////////
+    override fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {
+        if (motionEvent.action == MotionEvent.ACTION_DOWN) {
+            val v = currentFocus
+            if (isShouldHideInput(v, motionEvent)) {
+                hideSoftInput(v!!.windowToken)
+                v.requestFocus()
+            }
+        }
+        return super.dispatchTouchEvent(motionEvent)
+    }
+    private fun isShouldHideInput(v: View?, event: MotionEvent): Boolean {
+        if (v != null && v is EditText) {
+            val l = intArrayOf(0, 0)
+            v.getLocationInWindow(l)
+            val left = l[0]
+            val top = l[1]
+            val bottom = top + v.getHeight()
+            val right = (left
+                    + v.getWidth())
+            return !(event.x > left && event.x < right && event.y > top && event.y < bottom)
+        }
+        return false
+    }
+    private fun hideSoftInput(token: IBinder?) {
+        if (token != null) {
+            val im: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            im.hideSoftInputFromWindow( token,  InputMethodManager.HIDE_NOT_ALWAYS )
+        }
+    }
 }
