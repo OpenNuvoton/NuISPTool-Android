@@ -75,7 +75,7 @@ public class BluetoothLeDataManager {
         return bldList;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
+
     public Boolean isBluetoothEnabled(Context context){
         if (_mBluetoothAdapter == null || !_mBluetoothAdapter.isEnabled()) {
             final BluetoothManager bluetoothManager = (BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE);

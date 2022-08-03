@@ -29,6 +29,7 @@ import com.nuvoton.nuisptool_android.Util.HEXTool.to2HexString
 import kotlin.concurrent.thread
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
+import com.nuvoton.nuisptool_android.WiFi.SocketManager
 
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -135,19 +136,31 @@ class ISPActivity : AppCompatActivity() {
         //註冊離線監聽
         OTGManager.setIsOnlineListener {
             if (it == false) { //裝置離線
-                runOnUiThread {
-                    DialogTool.showAlertDialog(
-                        this,
-                        "Device is Disconnection",
-                        true,
-                        false,
-                        callback = { isOk, isNo ->
-                            val intent = Intent(this, MainActivity::class.java)
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                            this.startActivity(intent)
-                        })
-                }
+                backToTop()
             }
+        }
+
+        SocketManager.setIsOnlineListener {
+            if (it == false) { //裝置離線
+                backToTop()
+            }
+        }
+    }
+
+    private fun backToTop(){
+        runOnUiThread {
+
+            DialogTool.showAlertDialog(
+                this,
+                "Device is Disconnection",
+                true,
+                false,
+                callback = { isOk, isNo ->
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    this.startActivity(intent)
+                })
+
         }
     }
 

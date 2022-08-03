@@ -34,6 +34,11 @@ import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeCmdManager
 import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeData
 import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeDataManager
 import com.nuvoton.nuisptool_android.Util.DialogTool
+import com.nuvoton.nuisptool_android.WiFi.SocketCmdManager
+import com.nuvoton.nuisptool_android.WiFi.SocketManager
+import java.net.ConnectException
+import java.net.NoRouteToHostException
+import java.net.SocketTimeoutException
 import kotlin.concurrent.thread
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -123,26 +128,36 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
+        //註冊離線監聽
         OTGManager.setIsOnlineListener {
-            if (it == false) { //裝置離線 回到首頁
-                runOnUiThread {
-
-                    DialogTool.showAlertDialog(
-                        this,
-                        "Device is Disconnection",
-                        true,
-                        false,
-                        callback = { isOk, isNo ->
-                            val intent = Intent(this, MainActivity::class.java)
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                            this.startActivity(intent)
-                        })
-
-                }
+            if (it == false) { //裝置離線
+                backToTop()
             }
         }
 
+        SocketManager.setIsOnlineListener {
+            if (it == false) { //裝置離線
+                backToTop()
+            }
+        }
 
+    }
+
+    private fun backToTop(){
+        runOnUiThread {
+
+            DialogTool.showAlertDialog(
+                this,
+                "Device is Disconnection",
+                true,
+                false,
+                callback = { isOk, isNo ->
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    this.startActivity(intent)
+                })
+
+        }
     }
 
     fun initChipInfoData() {
@@ -340,6 +355,8 @@ class MainActivity : AppCompatActivity() {
             BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
             _findDeviceButton.setText("Find Device")
             _mainMessageText.setText("BLE Status: DisConnected")
+            _connectDeviceButton.isEnabled = false
+            _connectDeviceButton.setBackgroundColor(Color.GRAY)
             return@OnClickListener
         }
 
@@ -357,6 +374,101 @@ class MainActivity : AppCompatActivity() {
         }
 
         if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+
+            SocketManager.funTCPClientClose()
+
+            this.runOnUiThread {
+                DialogTool.showProgressDialog(this,"","Connecting Wifi Module...",false)
+            }
+
+            thread {
+                SocketManager.funTCPClientConnect { isConnect, exception ->
+
+                    if(isConnect != true){
+                        when (exception) {
+                            is SocketTimeoutException -> {
+                                this.runOnUiThread {
+                                    DialogTool.showAlertDialog(this,"Connect SocketTimeout.",true,false,null)
+                                }
+                                Log.e("SocketManager","连接超时");
+                            }
+                            is NoRouteToHostException -> {
+                                this.runOnUiThread {
+                                    DialogTool.showAlertDialog(this,"Connect NoRouteToHost.",true,false,null)
+                                }
+                                Log.e("SocketManager","该地址不存在");
+                            }
+                            is ConnectException -> {
+                                this.runOnUiThread {
+                                    DialogTool.showAlertDialog(this,"Connect Socket Failed",true,false,null)
+                                }
+                                Log.e("SocketManager","连接异常或被拒绝");
+                            }
+                            else -> {
+                                this.runOnUiThread {
+                                    DialogTool.showAlertDialog(this,"Connect Socket Close.",true,false,null)
+                                }
+                                Log.e("SocketManager","连接结束")
+                            }
+                        }
+                        return@funTCPClientConnect
+                    }
+
+                    this.runOnUiThread {
+                        DialogTool.showProgressDialog(this,"Search Device","Please reset to ISP mode",false)
+                    }
+
+                    SocketCmdManager.sendCMD_CONNECT { readBF, isChecksum, isTimeout ->
+
+                        DialogTool.dismissDialog()
+
+                        if (isTimeout == true) {
+                            Log.i(TAG, "sendCMD_CONNECT ---- Search Device is time out.")
+                            runOnUiThread {
+                                DialogTool.showAlertDialog(this,"Search Device is time out.",true,false,null)
+                                SocketManager.funTCPClientClose()
+                                _mainMessageText.setText("WiFi Status: DisConnected")
+                            }
+                            return@sendCMD_CONNECT
+                        }
+
+                        if (isChecksum == false) {
+                            Log.i(TAG, "sendCMD_CONNECT ---- is Not ISP InterFace")
+                            runOnUiThread {
+                                DialogTool.showAlertDialog(this,"is Not ISP InterFace",true,false,null)
+                                SocketManager.funTCPClientClose()
+                                _mainMessageText.setText("WiFi Status: DisConnected")
+                            }
+                            return@sendCMD_CONNECT
+                        }
+
+                        SocketCmdManager.sendCMD_GET_DEVICEID { readBF, isChecksum ->
+                            runOnUiThread {
+                                if (isChecksum == false || readBF == null) {
+                                    Log.i(TAG, "sendCMD_GET_DEVICEID ---- fail")
+                                    SocketManager.funTCPClientClose()
+                                    return@runOnUiThread
+                                }
+                                _deviceID = ISPCommandTool.toDeviceID(readBF)
+                                Log.i(TAG, "sendCMD_GET_DEVICEID ---- Device:$_deviceID")
+
+                                if (FileManager.getChipInfoByPDID(_deviceID!!) == null) {
+                                    _mainMessageText.setText("Find Device: unknown Device")
+                                    _connectDeviceButton.isEnabled = true
+                                    _connectDeviceButton.setBackgroundColor(Color.RED)
+                                    _findDeviceButton.setText("DisConnect BLE")
+                                    return@runOnUiThread
+                                }
+                                _mainMessageText.setText("Find Device: " + FileManager.CHIP_DATA.chipPdid.name)
+                                _connectDeviceButton.isEnabled = true
+                                _connectDeviceButton.setBackgroundColor(Color.RED)
+                                _findDeviceButton.setText("DisConnect BLE")
+                            }
+                        }
+                    }
+
+                }
+            }
             return@OnClickListener
         }
 
@@ -368,7 +480,15 @@ class MainActivity : AppCompatActivity() {
      * on connect Click Button
      */
     private val onConnectClickButton = View.OnClickListener {
-        Log.i(TAG, "onConnectClickButton")
+        Log.i(TAG, "onConnectClickButton open")
+
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi && _deviceID != null){
+            val intent = Intent(applicationContext, ISPActivity::class.java).apply {
+                putExtra("DeviceID", _deviceID)
+            }
+            startActivity(intent)
+            return@OnClickListener
+        }
 
         if(ISPManager.interfaceType == NulinkInterfaceType.BLE && BluetoothLeCmdManager.BLE_DATA != null){
             val intent = Intent(applicationContext, ISPActivity::class.java).apply {
@@ -419,7 +539,7 @@ class MainActivity : AppCompatActivity() {
             if (isChecksum == false) {
                 Log.i(TAG, "sendCMD_CONNECT ---- is Not ISP InterFace")
                 runOnUiThread {
-                    DialogTool.showAlertDialog(this,"is Not USB InterFace",true,false,null)
+                    DialogTool.showAlertDialog(this,"is Not ISP InterFace",true,false,null)
                     BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
                     _mainMessageText.setText("BLE Status: DisConnected")
                 }
@@ -475,11 +595,11 @@ class MainActivity : AppCompatActivity() {
     private fun ScanBleDevice() {
 
         if(_bdm.isBluetoothEnabled(BluetoothLeDataManager.context) == false){
-            Toast.makeText(BluetoothLeDataManager.context, "R.string.ble_not_supported", Toast.LENGTH_SHORT).show();
+            Toast.makeText(BluetoothLeDataManager.context, "ble not supported", Toast.LENGTH_SHORT).show();
             return
         }
         if(_bdm.isGPSEnabled(BluetoothLeDataManager.context) == false){
-            Toast.makeText(BluetoothLeDataManager.context, "R.string.GPS_not_supported", Toast.LENGTH_SHORT).show();
+            Toast.makeText(BluetoothLeDataManager.context, "GPS not supported", Toast.LENGTH_SHORT).show();
             return
         }
 

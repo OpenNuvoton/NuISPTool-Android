@@ -176,7 +176,6 @@
                         android:id="@+id/RadioButton_WiFi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
                         android:text="WiFi" />
                 </LinearLayout>
                 <LinearLayout

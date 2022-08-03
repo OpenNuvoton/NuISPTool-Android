@@ -61,7 +61,7 @@ object BluetoothLeCmdManager {
         var readBufferStrring = HEXTool.toHexString(sendBuffer)
         var display = HEXTool.toDisPlayString(readBufferStrring)
         Log.i("BluetoothLeCmdManager", "write   CMD:"+display)
-        val timeOutIndex = 0
+        var timeOutIndex = 0
         var isTimeOut = false
         _responseBuffer = byteArrayOf()
         WRITE_BC!!.write( sendBuffer)
@@ -69,17 +69,19 @@ object BluetoothLeCmdManager {
             Thread.sleep(300)
             WRITE_BC!!.write( sendBuffer)
 
-            if(timeOutIndex > 100){
+            if(timeOutIndex > 60){
                 callback.invoke(_responseBuffer,false,true)
                 isTimeOut = true
                 return
             }
+            timeOutIndex = timeOutIndex + 1
+            Log.i("BluetoothLeCmdManager", "timeOutIndex :"+timeOutIndex + "   isTimeOut:"+isTimeOut)
         }
 
         Thread.sleep(1000)
 
         val isChecksum = ISPManager.isChecksum_PackNo(sendBuffer, _responseBuffer)
-        callback.invoke(_responseBuffer,isChecksum,false)
+        callback.invoke(_responseBuffer,isChecksum,isTimeOut)
     }
 
     fun sendCMD_GET_DEVICEID( callback: ((ByteArray?, Boolean) -> Unit)) {

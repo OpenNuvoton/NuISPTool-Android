@@ -12,6 +12,7 @@ import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeDataManager
 import com.nuvoton.nuisptool_android.Util.DialogTool
 import com.nuvoton.nuisptool_android.Util.Log
 import com.nuvoton.nuisptool_android.Util.HEXTool
+import com.nuvoton.nuisptool_android.WiFi.SocketCmdManager
 import kotlin.concurrent.thread
 
 enum class NulinkInterfaceType constructor(val value: Byte) {
@@ -174,6 +175,14 @@ object ISPManager {
             return
         }
 
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_UPDATE_BIN(cmd,sendByteArray,startAddress, callback = { readBuffer, P ->
+                callback.invoke(readBuffer, P)
+            })
+            return
+        }
+
         if(cmd != ISPCommands.CMD_UPDATE_APROM && cmd != ISPCommands.CMD_UPDATE_DATAFLASH){
             return
         }
@@ -253,6 +262,14 @@ object ISPManager {
             return
         }
 
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_ERASE_ALL { readBuffer, isChecksum ->
+                callback.invoke(readBuffer, isChecksum)
+            }
+            return
+        }
+
         val cmd = ISPCommands.CMD_ERASE_ALL
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
 
@@ -268,6 +285,14 @@ object ISPManager {
         //如果是BLE
         if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
             BluetoothLeCmdManager.sendCMD_READ_CONFIG {
+                callback.invoke(it)
+            }
+            return
+        }
+
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_READ_CONFIG {
                 callback.invoke(it)
             }
             return
@@ -299,6 +324,15 @@ object ISPManager {
             }
             return
         }
+
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_GET_FWVER { readBuffer, isChecksum ->
+                callback.invoke(readBuffer, isChecksum)
+            }
+            return
+        }
+
         val cmd = ISPCommands.CMD_GET_FWVER
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
         this.write( sendBuffer)
@@ -313,6 +347,14 @@ object ISPManager {
         //如果是BLE
         if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
             BluetoothLeCmdManager.sendCMD_RUN_APROM {
+                callback.invoke(it)
+            }
+            return
+        }
+
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_RUN_APROM {
                 callback.invoke(it)
             }
             return
@@ -338,6 +380,14 @@ object ISPManager {
         if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
             BluetoothLeCmdManager.sendCMD_UPDATE_CONFIG(config0,config1,config2,config3, callback = {
                     callback.invoke(it)
+            })
+            return
+        }
+
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_UPDATE_CONFIG(config0,config1,config2,config3, callback = {
+                callback.invoke(it)
             })
             return
         }
@@ -398,6 +448,14 @@ object ISPManager {
         //如果是BLE
         if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
             BluetoothLeCmdManager.sendCMD_GET_DEVICEID { readBuffer, isChecksum ->
+                callback.invoke(readBuffer,isChecksum)
+            }
+            return
+        }
+
+        //如果是WiFi
+        if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
+            SocketCmdManager.sendCMD_GET_DEVICEID { readBuffer, isChecksum ->
                 callback.invoke(readBuffer,isChecksum)
             }
             return
