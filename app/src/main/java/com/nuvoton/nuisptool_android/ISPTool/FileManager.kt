@@ -4,10 +4,15 @@ import android.R.attr
 import android.net.Uri
 import android.provider.MediaStore
 import android.R.attr.data
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Environment
+import android.os.storage.StorageManager
+import android.provider.DocumentsContract
 import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.core.content.PackageManagerCompat
 import com.nuvoton.nuisptool_android.Util.Log
 import kotlinx.serialization.Serializable
@@ -61,6 +66,7 @@ data class ChipPdidData(
 
 }
 
+@RequiresApi(Build.VERSION_CODES.Q)
 object FileManager {
 
     private var TAG = "FileManager"
@@ -73,10 +79,22 @@ object FileManager {
 
     fun loadChipInfoFile(context: Context): String {
 
-        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path
-        binpath += "/ISPTool"
-        val file = File(binpath, "chip_info.json")
+        val sm = context.getSystemService(Context.STORAGE_SERVICE) as StorageManager
+        val intent = sm.primaryStorageVolume.createOpenDocumentTreeIntent()
+        val startDir = "Documents"
+        var uri = intent.getParcelableExtra<Uri>("android.provider.extra.INITIAL_URI")
+        var scheme = uri.toString()
+        Log.d(TAG, "INITIAL_URI scheme: $scheme")
+        scheme = scheme.replace("/root/", "/document/ISPTool/chip_info.json")
+        scheme += "%3A$startDir"
+        uri = Uri.parse(scheme)
 
+
+
+//        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).path
+//        binpath += "/ISPTool"
+//        val file = File(binpath, "chip_info.json")
+        val file = File(uri.path)
         if(file.exists()){ //如果有就讀取
             val json = file.readText()
             _cid = Json.decodeFromString<ArrayList<ChipInfoData>>(json)
@@ -94,10 +112,20 @@ object FileManager {
 
     fun loadChipPdidFile(context: Context): String{
 
-        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path
-        binpath += "/ISPTool"
-        val file = File(binpath, "chip_pdid.json")
+        val sm = context.getSystemService(Context.STORAGE_SERVICE) as StorageManager
+        val intent = sm.primaryStorageVolume.createOpenDocumentTreeIntent()
+        val startDir = "Documents"
+        var uri = intent.getParcelableExtra<Uri>("android.provider.extra.INITIAL_URI")
+        var scheme = uri.toString()
+        Log.d(TAG, "INITIAL_URI scheme: $scheme")
+        scheme = scheme.replace("/root/", "/document/ISPTool/chip_pdid.json")
+        scheme += "%3A$startDir"
+        uri = Uri.parse(scheme)
 
+//        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path
+//        binpath += "/ISPTool"
+//        val file = File(binpath, "chip_pdid.json")
+        val file = File(uri.path)
         if(file.exists()){ //如果有就讀取
             val json = file.readText()
             _cpd = Json.decodeFromString<ArrayList<ChipPdidData>>(json)
@@ -116,7 +144,7 @@ object FileManager {
 
     fun saveFile(context: Context,chipInfoFile : String,chipPdidFile : String){
 
-        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path
+        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).path
 
         binpath += "/ISPTool"
 
@@ -159,7 +187,7 @@ object FileManager {
             }
         }
 
-        var configPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path
+        var configPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).path
         configPath += "/ISPTool/Config"
 
         val configPathFile = File(configPath)

@@ -12,11 +12,19 @@ import com.nuvoton.nuisptool_android.Util.Log
 import com.nuvoton.nuisptool_android.R
 import java.util.HashMap
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.nuvoton.nuisptool_android.ISPActivity
 import com.nuvoton.nuisptool_android.MainActivity
 import androidx.core.content.ContextCompat.startActivity
+import com.hoho.android.usbserial.driver.UsbSerialPort
+import com.hoho.android.usbserial.driver.UsbSerialProber
 import com.nuvoton.nuisptool_android.Util.DialogTool
+import com.hoho.android.usbserial.driver.UsbSerialDriver
+
+import com.hoho.android.usbserial.driver.CdcAcmSerialDriver
+
+import com.hoho.android.usbserial.driver.ProbeTable
 
 
 object OTGManager {
@@ -42,11 +50,12 @@ object OTGManager {
     private lateinit var _pendingIntent: PendingIntent
     private lateinit var _USBDevice: UsbDevice
     private var _DeviceListener: ((UsbDevice) -> Unit)? = null
+    private var _SerialDeviceListener: ((UsbSerialDriver) -> Unit)? = null
     private var _isOnlineListener: ((Boolean) -> Unit)? = null
     private var _isRegisterReceiver = false
 
     fun start(context: Context) {
-        if(_isRegisterReceiver == true){
+        if (_isRegisterReceiver == true) {
             return
         }
         //監聽事件廣播註冊
@@ -81,6 +90,42 @@ object OTGManager {
                 Log.i(TAG, "vendorId:" + _USBDevice.vendorId)
 //                Log.i(TAG, "getInterface 5 :" + _USBDevice.getInterface(5))
 
+//                //UART 走 mik3y/usb-serial-for-android
+//                if (ISPManager.interfaceType == NulinkInterfaceType.UART) {
+//                    // Probe for our custom CDC devices, which use VID 0x1234
+//                    // and PIDS 0x0001 and 0x0002.
+//
+//                    val customTable = ProbeTable()
+//                    customTable.addProduct(_USBDevice.vendorId,_USBDevice.productId,CdcAcmSerialDriver::class.java)
+//
+//                    val prober = UsbSerialProber(customTable)
+//                    val drivers = prober.findAllDrivers(USBManager)
+//
+//                    // Open a connection to the first available driver.
+//                    val driver = drivers[0]
+//
+//                    _SerialDeviceListener.let {
+//                        if (it != null) {
+//                        it(driver)
+//                    } }
+//                    val connection = USBManager.openDevice(driver.device)
+//                    if (connection == null) {
+//                        // add UsbManager.requestPermission(driver.getDevice(), ..) handling here
+//                        return
+//                    }
+//
+//                    val port :UsbSerialDriver = driver.ports[0] // Most devices have just one port (port 0)
+//
+//                    port.open(connection)
+//                    port.setParameters(115200,8,UsbSerialPort.STOPBITS_1,UsbSerialPort.PARITY_NONE)
+//                    val readBuffer = ByteArray(64)
+////                    port.write(request, 10);
+//                    val len = port.read(readBuffer, 10);
+//
+//                    return
+//                }
+
+
                 _DeviceListener.let {
                     if (it != null) {
                         it(_USBDevice)
@@ -108,6 +153,7 @@ object OTGManager {
 
     fun startUsbConnecting(context: Context) {
         Log.i(TAG, "startUsbConnecting")
+
         val usbDevices: HashMap<String, UsbDevice>? = USBManager.deviceList
         if (!usbDevices?.isEmpty()!!) {
             var keep = true
@@ -129,12 +175,16 @@ object OTGManager {
                 "No USB Device Connected",
                 true,
                 false,
-                callback = { isOk, isNo ->}
+                callback = { isOk, isNo -> }
             )
 
             Log.i(TAG, "no usb device connected")
 
         }
+    }
+
+    fun setGetSerialDeviceListener(callbacks: (UsbSerialDriver) -> Unit){
+        _SerialDeviceListener = callbacks
     }
 
     fun setGetUsbDeviceListener(callbacks: (UsbDevice) -> Unit) {

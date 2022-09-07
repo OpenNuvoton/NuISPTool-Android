@@ -1,12 +1,10 @@
 package com.nuvoton.nuisptool_android
 
 
-import android.app.Activity
-import android.app.AlertDialog
 import android.bluetooth.BluetoothProfile
 import android.bluetooth.le.ScanCallback
 import android.bluetooth.le.ScanResult
-import android.content.DialogInterface
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.hardware.usb.UsbDevice
@@ -16,8 +14,8 @@ import android.os.Bundle
 
 import android.os.Build
 import android.os.Environment
-import android.provider.Settings
-import android.provider.Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
+import android.os.storage.StorageManager
+import android.provider.DocumentsContract
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -36,12 +34,14 @@ import com.nuvoton.nuisptool_android.Bluetooth.BluetoothLeDataManager
 import com.nuvoton.nuisptool_android.Util.DialogTool
 import com.nuvoton.nuisptool_android.WiFi.SocketCmdManager
 import com.nuvoton.nuisptool_android.WiFi.SocketManager
+import java.lang.Exception
 import java.net.ConnectException
 import java.net.NoRouteToHostException
 import java.net.SocketTimeoutException
 import kotlin.concurrent.thread
 
-@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+
+@RequiresApi(Build.VERSION_CODES.Q)
 class MainActivity : AppCompatActivity() {
 
     private var TAG = "MainActivity"
@@ -72,7 +72,6 @@ class MainActivity : AppCompatActivity() {
     private var _scanResultDeviceArray: ArrayList<String> = ArrayList<String>()
     private lateinit var _alertDialog: MaterialDialog
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -107,24 +106,60 @@ class MainActivity : AppCompatActivity() {
         _radioButton_BLE.setOnCheckedChangeListener(CompoundButtonOnCheckedChangeListener)
         _radioButtonList = arrayOf(_radioButton_USB,_radioButton_UART,_radioButton_SPI,_radioButton_I2C,_radioButton_RS485,_radioButton_CAN,_radioButton_WiFi,_radioButton_BLE)
 
+        ISPManager.interfaceType = NulinkInterfaceType.USB
+        BluetoothLeDataManager.context = this
+        setPermission()
+        //android R = 11
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R || Environment.isExternalStorageManager()) {
-        } else {
-            val intent = Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
-            startActivity(intent)
 
+            this.initUSBHost()
+            this.initChipInfoData()
+
+        } else {
+//            val intent = Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
+//            startActivity(intent)
+            try {
+                this.initUSBHost()
+                this.initChipInfoData()
+
+            }catch (e:Exception){
+                val sm = getSystemService(Context.STORAGE_SERVICE) as StorageManager
+                val intent = sm.primaryStorageVolume.createOpenDocumentTreeIntent()
+                val startDir = "Documents"
+                var uri = intent.getParcelableExtra<Uri>("android.provider.extra.INITIAL_URI")
+                var scheme = uri.toString()
+                Log.d(TAG, "INITIAL_URI scheme: $scheme")
+                scheme = scheme.replace("/root/", "/document/ISPTool")
+                scheme += "%3A$startDir"
+                uri = Uri.parse(scheme)
+                intent.putExtra("android.provider.extra.INITIAL_URI", uri)
+                Log.d(TAG, "uri: $uri")
+                startActivityForResult(intent, 666)
+            }
         }
 
         if(BluetoothLeCmdManager.BLE_DATA != null && BluetoothLeCmdManager.BLE_DATA!!.isConnect){
             BluetoothLeCmdManager.BLE_DATA!!.setDisClose()
         }
-
-        this.initUSBHost()
-        this.initChipInfoData()
-        ISPManager.interfaceType = NulinkInterfaceType.USB
-        BluetoothLeDataManager.context = this
-        setPermission()
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Log.i(TAG, "onActivityResult ---- requestCode:"+requestCode+",    resultCode:"+resultCode+",     data:"+data)
+        this.initUSBHost()
+        this.initChipInfoData()
+    }
+
+    fun openDirectory(pickerInitialUri: Uri) {
+        // Choose a directory using the system's file picker.
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+            // Optionally, specify a URI for the directory that should be opened in
+            // the system file picker when it loads.
+            putExtra(DocumentsContract.EXTRA_INITIAL_URI, pickerInitialUri)
+        }
+
+        startActivityForResult(intent, 666)
+    }
     override fun onResume() {
         super.onResume()
 
@@ -167,7 +202,6 @@ class MainActivity : AppCompatActivity() {
         FileManager.saveFile(this, infoJson, pdidJson)
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     fun initUSBHost() {
         //todo OTGManager USB HOST init
         OTGManager.init(this)//初始化
@@ -176,6 +210,18 @@ class MainActivity : AppCompatActivity() {
             //取得裝置 USB device
             _USBDevice = it
 
+            if(ISPManager.interfaceType == NulinkInterfaceType.UART && (_USBDevice!!.productId == 20992||_USBDevice!!.productId == 20994||_USBDevice!!.productId == 20766)){
+                if(SerialManager.doSerialConnect(_USBDevice!!) == true){
+                    thread {
+                        doConnectDevice()
+                    }
+                }else{
+                    this.runOnUiThread {
+                        DialogTool.showAlertDialog(this, "Open Serial Fail", true, false, null)
+                    }
+                }
+                return@setGetUsbDeviceListener
+            }
             //todo 判斷是否為可連接 PID 16128 = ISP_USB 16144 = Nulink2 , 20994 = Nulink2_me
             if(ISPManager.interfaceType == NulinkInterfaceType.USB && _USBDevice!!.productId != 16128){
                 this.runOnUiThread {
@@ -189,11 +235,18 @@ class MainActivity : AppCompatActivity() {
                 return@setGetUsbDeviceListener
             }
 
-            this.doConnect()
+            this.doConnectDevice()
+        }
+        OTGManager.setGetSerialDeviceListener {
+            if(ISPManager.interfaceType != NulinkInterfaceType.UART){
+                return@setGetSerialDeviceListener
+            }
+
+            SerialManager.SerialDriver = it
         }
     }
 
-    private fun doConnect(){
+    private fun doConnectDevice(){
 
         //等待目標版進入 ISP MODE
         if(ISPManager.interfaceType != NulinkInterfaceType.USB){
@@ -362,11 +415,11 @@ class MainActivity : AppCompatActivity() {
 
         if(ISPManager.interfaceType == NulinkInterfaceType.BLE){
             if(_bdm.isBluetoothEnabled(this) == false){
-                Toast.makeText(this, "R.string.ble_not_supported", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "BLE Not Enabled", Toast.LENGTH_SHORT).show();
                 return@OnClickListener
             }
             if(_bdm.isGPSEnabled(this) == false){
-                Toast.makeText(this, "R.string.GPS_not_supported", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "GPS Not Enabled", Toast.LENGTH_SHORT).show();
                 return@OnClickListener
             }
             ScanBleDevice()
@@ -574,17 +627,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun setPermission(): Boolean {
 
-        val pm = PermissionManager(this)
-        val permissionArray = ArrayList<PermissionManager.PermissionType>()
-        permissionArray.add(PermissionManager.PermissionType.GPS)
-        permissionArray.add(PermissionManager.PermissionType.READ_EXTERNAL_STORAGE)
-        permissionArray.add(PermissionManager.PermissionType.WRITE_EXTERNAL_STORAGE)
-        permissionArray.add(PermissionManager.PermissionType.BLUETOOTH)
-        permissionArray.add(PermissionManager.PermissionType.BLUETOOTH_SCAN)
-        permissionArray.add(PermissionManager.PermissionType.BLUETOOTH_CONNECT)
-        permissionArray.add(PermissionManager.PermissionType.MANAGE_EXTERNAL_STORAGE)
+        DialogTool.showAlertDialog(this,"Prominent disclosure","If user wants to use BLE function in this app, user needs to open GPS, for backend to search BLE device.\n" +
+                "NuISPTool collects location data to enable GPS searching BLE device, only when the app is opened.",true,false, callback = {isok,isCancel ->
 
-        pm.selfPermission("權限", permissionArray)
+            val pm = PermissionManager(this)
+            val permissionArray = ArrayList<PermissionManager.PermissionType>()
+            permissionArray.add(PermissionManager.PermissionType.GPS)
+            permissionArray.add(PermissionManager.PermissionType.READ_EXTERNAL_STORAGE)
+            permissionArray.add(PermissionManager.PermissionType.WRITE_EXTERNAL_STORAGE)
+            permissionArray.add(PermissionManager.PermissionType.BLUETOOTH)
+            permissionArray.add(PermissionManager.PermissionType.BLUETOOTH_SCAN)
+            permissionArray.add(PermissionManager.PermissionType.BLUETOOTH_CONNECT)
+//            permissionArray.add(PermissionManager.PermissionType.MANAGE_EXTERNAL_STORAGE)
+
+            pm.selfPermission("權限", permissionArray)
+        })
 
         return false
     }

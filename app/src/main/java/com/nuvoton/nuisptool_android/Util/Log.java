@@ -5,7 +5,7 @@ package com.nuvoton.nuisptool_android.Util;
  */
 
 public class Log {
-    private static boolean hasLog = false ;
+    private static boolean hasLog = true ;
     public static void v(String LOG_TAG, String log){
         if(hasLog){
             android.util.Log.v(LOG_TAG, log);

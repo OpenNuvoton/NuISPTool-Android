@@ -12,10 +12,10 @@ android {
 
     defaultConfig {
         applicationId "com.nuvoton.nuisptool_android"
-        minSdk 26
+        minSdk 29
         targetSdk 31
-        versionCode 1
-        versionName "1.0.10"
+        versionCode 3
+        versionName "1.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -58,6 +58,10 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
 
+    //https://github.com/mik3y/usb-serial-for-android
+    implementation 'com.github.mik3y:usb-serial-for-android:3.4.6'
+
     implementation 'com.afollestad.material-dialogs:core:3.1.0'
+
 
 }

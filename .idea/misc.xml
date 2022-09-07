@@ -8,12 +8,14 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.30277777777777776" />
         <entry key="app/src/main/res/layout/activity_config.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_ispactivity.xml" value="0.33645833333333336" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29030797101449274" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/config_row.xml" value="0.38645833333333335" />
         <entry key="app/src/main/res/layout/config_row1.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialog_layout_edittext.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_tabbed.xml" value="0.178125" />
         <entry key="app/src/main/res/layout/settings_activity.xml" value="0.33645833333333336" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265625" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.23541666666666666" />
       </map>
     </option>
   </component>

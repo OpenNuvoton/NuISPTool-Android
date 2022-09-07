@@ -32,7 +32,7 @@ import android.view.inputmethod.InputMethodManager
 import com.nuvoton.nuisptool_android.WiFi.SocketManager
 
 
-@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+@RequiresApi(Build.VERSION_CODES.Q)
 class ISPActivity : AppCompatActivity() {
 
     private var TAG = "ISPActivity"

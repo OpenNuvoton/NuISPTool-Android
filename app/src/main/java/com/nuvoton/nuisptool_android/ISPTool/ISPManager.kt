@@ -19,7 +19,7 @@ enum class NulinkInterfaceType constructor(val value: Byte) {
 
     USB    (0x00),
 //  HID    (0x01),
-    UART   (0x02),
+    UART   (0x00),
     SPI    (0x03),
     I2C    (0x04),
     RS485  (0x05),
@@ -183,6 +183,14 @@ object ISPManager {
             return
         }
 
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_UPDATE_BIN(cmd,sendByteArray,startAddress, callback = { readBuffer, P ->
+                callback.invoke(readBuffer, P)
+            })
+            return
+        }
+
         if(cmd != ISPCommands.CMD_UPDATE_APROM && cmd != ISPCommands.CMD_UPDATE_DATAFLASH){
             return
         }
@@ -270,6 +278,14 @@ object ISPManager {
             return
         }
 
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_ERASE_ALL { readBuffer, isChecksum ->
+                callback.invoke(readBuffer, isChecksum)
+            }
+            return
+        }
+
         val cmd = ISPCommands.CMD_ERASE_ALL
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
 
@@ -293,6 +309,14 @@ object ISPManager {
         //如果是WiFi
         if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
             SocketCmdManager.sendCMD_READ_CONFIG {
+                callback.invoke(it)
+            }
+            return
+        }
+
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_READ_CONFIG {
                 callback.invoke(it)
             }
             return
@@ -333,6 +357,14 @@ object ISPManager {
             return
         }
 
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_GET_FWVER { readBuffer, isChecksum ->
+                callback.invoke(readBuffer, isChecksum)
+            }
+            return
+        }
+
         val cmd = ISPCommands.CMD_GET_FWVER
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
         this.write( sendBuffer)
@@ -355,6 +387,14 @@ object ISPManager {
         //如果是WiFi
         if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
             SocketCmdManager.sendCMD_RUN_APROM {
+                callback.invoke(it)
+            }
+            return
+        }
+
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_RUN_APROM {
                 callback.invoke(it)
             }
             return
@@ -387,6 +427,14 @@ object ISPManager {
         //如果是WiFi
         if(ISPManager.interfaceType == NulinkInterfaceType.WiFi){
             SocketCmdManager.sendCMD_UPDATE_CONFIG(config0,config1,config2,config3, callback = {
+                callback.invoke(it)
+            })
+            return
+        }
+
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_UPDATE_CONFIG(config0,config1,config2,config3, callback = {
                 callback.invoke(it)
             })
             return
@@ -429,6 +477,14 @@ object ISPManager {
 
     fun sendCMD_CONNECT( callback: ((ByteArray?, Boolean,isTimeout:Boolean) -> Unit)) {
 
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_CONNECT { bytes, b, isTimeout ->
+                callback.invoke(bytes, b,isTimeout)
+            }
+            return
+        }
+
         this.packetNumber = (0x00000001).toUInt()
         val cmd = ISPCommands.CMD_CONNECT
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
@@ -461,6 +517,14 @@ object ISPManager {
             return
         }
 
+        //如果是UART
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.sendCMD_GET_DEVICEID { readBuffer, isChecksum ->
+                callback.invoke(readBuffer,isChecksum)
+            }
+            return
+        }
+
         val cmd = ISPCommands.CMD_GET_DEVICEID
         val sendBuffer = ISPCommandTool.toCMD(cmd, packetNumber)
         this.write( sendBuffer)
@@ -488,7 +552,7 @@ object ISPManager {
             return false
         }
 
-        //如果是CAN
+        //如果是CAN 無條件回true CAN沒有Checksum
         if(ISPManager.interfaceType == NulinkInterfaceType.CAN){
             return true
         }
@@ -520,6 +584,12 @@ object ISPManager {
 
     @SuppressLint("NewApi")
     private fun executeWriteRead( cmdArray: ByteArray,timeoutIndex:Int,callback: (ByteArray?,isTimeout:Boolean) -> Unit){
+
+        //如果是Uart
+        if(ISPManager.interfaceType == NulinkInterfaceType.UART){
+            SerialManager.executeWriteRead(cmdArray,timeoutIndex,callback)
+            return
+        }
 
         val usbDevice = OTGManager.get_USBDevice()
 

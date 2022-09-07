@@ -18,6 +18,31 @@ object DialogTool {
     private var _progressDialog: ProgressDialog? = null
     private var _alertDialog : AlertDialog? = null
     private var _isTimeOut = false
+
+    fun showAlertDialog(context: Context,title:String,message: String,isOkEnable: Boolean,isCancelEnable: Boolean,callback:((isClickOk:Boolean,isClickNo:Boolean) -> Unit)?) {
+
+        this.dismissDialog()
+
+        val builder = AlertDialog.Builder(context)
+        _alertDialog = builder.create()
+        _alertDialog!!.setTitle(title)
+        _alertDialog!!.setMessage(message)
+        if (isOkEnable) {
+            _alertDialog!!.setButton(AlertDialog.BUTTON_POSITIVE,"ok",DialogInterface.OnClickListener { dialogInterface, i ->
+                if(callback!=null)
+                    callback.invoke(true,false)
+            })
+        }
+        if (isCancelEnable) {
+            _alertDialog!!.setButton(AlertDialog.BUTTON_NEGATIVE,"Cancel",DialogInterface.OnClickListener { dialogInterface, i ->
+                if(callback!=null)
+                    callback.invoke(false,true)
+            })
+        }
+
+        _alertDialog!!.show()
+    }
+
     fun showAlertDialog(context: Context,message: String,isOkEnable: Boolean,isCancelEnable: Boolean,callback:((isClickOk:Boolean,isClickNo:Boolean) -> Unit)?) {
 
         this.dismissDialog()

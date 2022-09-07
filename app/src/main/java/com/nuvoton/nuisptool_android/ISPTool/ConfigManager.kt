@@ -17,7 +17,7 @@ import java.io.FileInputStream
 import java.io.FileNotFoundException
 import java.io.IOException
 import java.util.*
-
+@RequiresApi(Build.VERSION_CODES.KITKAT)
 object ConfigManager {
 
     private var TAG = "ConfigManager"
@@ -30,9 +30,10 @@ object ConfigManager {
 
 
 
-    fun readConfigFromFile(context: Context,series:String ,jsonIndex: String?): Boolean {
 
-        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path
+    fun readConfigFromFile(context: Context, series:String, jsonIndex: String?): Boolean {
+
+        var binpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).path
         binpath += "/ISPTool/Config"
         val file = File(binpath, series + ".json")
 
