@@ -13,7 +13,7 @@
         android:layout_weight="1"
         >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -23,32 +23,23 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
+
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="-20dp"
-                android:scaleType="centerInside"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_memory" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_weight="1.2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/imageView"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="60dp"
                 android:layout_marginBottom="0dp"
-                android:background="@drawable/ic_nuvoton_logo"
-                android:scaleType="centerInside" />
 
+                app:srcCompat="@drawable/ic_nuisp_logo"
+                android:scaleType="centerInside"
+                />
+            <!--                android:background="@drawable/ic_nuisp_logo"-->
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <LinearLayout
@@ -148,7 +139,7 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/red"
-                android:text="APP InterFace：" />
+                android:text="APP Interface：" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -218,8 +209,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="10dp"
-                android:textColor="@color/red"
-                android:text="Version" />
+                android:text="Version"
+                android:textColor="@color/red" />
 
             <TextView
                 android:id="@+id/main_message"
@@ -230,6 +221,17 @@
                 android:layout_marginBottom="30dp"
                 android:gravity="center"
                 android:text=""
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/policy"
                 android:textColor="@color/red" />
         </RelativeLayout>
 

@@ -114,7 +114,7 @@ class ConfigActivity : AppCompatActivity() {
             runOnUiThread {
 
                 val builder = android.app.AlertDialog.Builder(this)
-                builder.setTitle("is implement the config burn ?")
+                builder.setTitle("is execute the config burn ?")
                 builder.setNeutralButton("Cancel") { _, _ -> }
                 builder.setPositiveButton("ok") { _, _ ->
 

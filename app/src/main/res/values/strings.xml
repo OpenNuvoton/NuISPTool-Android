@@ -26,4 +26,6 @@
     <string name="disconnect">⇦ DisConnect</string>
     <string name="Device_is_Disconnection">Device is Disconnection</string>
     <string name="execute">Execute</string>
+
+    <string name="policy"><a href='http://www.nuvoton.com/app-privacy-policy'>privacy policy</a></string>
 </resources>

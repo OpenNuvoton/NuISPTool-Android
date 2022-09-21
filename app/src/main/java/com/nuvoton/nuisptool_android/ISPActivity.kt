@@ -30,6 +30,7 @@ import kotlin.concurrent.thread
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
 import com.nuvoton.nuisptool_android.WiFi.SocketManager
+import java.util.*
 
 
 @RequiresApi(Build.VERSION_CODES.Q)
@@ -605,6 +606,9 @@ class ISPActivity : AppCompatActivity() {
 
         //需要照順序 EraseALL> Config bit > APROM > DATAFLASH > Reset Run
         var hasFaile = false
+        var sTime: Date = Calendar.getInstance().time//系统现在时间
+        var tempAPsize = 0
+        var tempFlashsize = 0
         thread {
             //  Erase All
             if (_checkbox_erase_all.isChecked == true) {
@@ -631,6 +635,7 @@ class ISPActivity : AppCompatActivity() {
                 }
 
                 val dataArray = FileManager.APROM_BIN!!.byteArray
+                tempAPsize = dataArray.size
 
                 var startAddress = (0x00000000).toUByte().toUInt()
                 if(!_editTextAddress.text.isNullOrEmpty() && _checkbox_address.isChecked == true){
@@ -669,6 +674,7 @@ class ISPActivity : AppCompatActivity() {
                 }
 
                 val dataArray = FileManager.DATAFLASH_BIN!!.byteArray
+                tempFlashsize = dataArray.size
                 val startAddress = (0x00000000).toUByte().toUInt() //特殊chip以後可以改
 
                 ISPManager.sendCMD_UPDATE_BIN(ISPCommands.CMD_UPDATE_DATAFLASH,dataArray,startAddress,callback = { readArray, progress ->
@@ -708,7 +714,24 @@ class ISPActivity : AppCompatActivity() {
                     }
                 })
             }
-        }
+
+            var eTime: Date = Calendar.getInstance().time//系统现在时间
+            val diff = eTime.time - sTime.time
+            val days = diff / (1000 * 60 * 60 * 24)
+            val hours = (diff - days * (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            val minutes = ((diff - days * (1000 * 3600 * 24)) - hours * (1000 * 3600)) / (1000 * 60)
+            val second = (diff - days * 1000 * 3600 * 24 - hours * 1000 * 3600 - minutes * 1000 * 60) / 1000
+            println("差距(秒): " + (diff / 1000))
+            println("$days d $hours h $minutes m $second s")
+
+
+            val datarate = (tempFlashsize+tempAPsize).toDouble()/(diff / 1000).toDouble()
+            val roundoff = String.format("%.2f", datarate)
+            runOnUiThread {
+                DialogTool.showAlertDialog(this, "Burn", "Burn Data is complete \n Time: "+(diff / 1000) +" s\n Data rate: $roundoff B/s", true,false,null)
+
+            }
+      }
 
 
 
